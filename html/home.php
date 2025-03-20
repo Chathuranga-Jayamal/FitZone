@@ -63,7 +63,31 @@
         
     </section>
     <section id="programs">
-
+        <div class="program-container">
+            <div class="program-title">
+                <h1 style="color: white ; font-size: 4rem">Our Programs 👋</h1>
+            </div>
+            <div class="Group-program">
+                <img class="group-img" src="../images/photos/group2.jpg" alt="group img">
+                <div class="group-Details">
+                    <h1 style="color: white ; font-size: 3rem;">Group Training Program</h1>
+                    <p style="margin-top: 20px; font-size: 1.2rem;">At FitZone Fitness Center, we believe that working out together creates motivation, 
+                        energy, and lasting results. Our Group Training Programs are designed to bring people together in a dynamic and supportive 
+                        environment, making fitness both effective and enjoyable. </p>
+                    <button class="btn btn-outline-primary btn-lg" style="border-color: white; color: white; background-color: black" type="button" onclick="window.location.href='program.php';">👉 Read More</button>
+                </div>
+            </div>
+            <div class="indivisual-program">
+                <img class="individual-img" src="../images/photos/individual1.jpg" alt="individual img">
+                <div class="individual-Details">
+                    <h1 style="color: white ; font-size: 3rem;">Indivisual Training Program</h1>
+                    <p style="margin-top: 20px; font-size: 1.2rem;">At FitZone Fitness Center, we understand that individual training is essential for 
+                        achieving your fitness goals. Our Indivisual Training Programs offer personalized attention, guidance, and support to help you 
+                        reach your full potential.</p>
+                    <button class="btn btn-outline-primary btn-lg" style="border-color: white; color: white; background-color: black" type="button" onclick="window.location.href='program.php';">👉 Read More</button>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="reviews">
 
