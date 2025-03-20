@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="./CSS/aboutUs.css">
+    <title>Program</title>
+    <link rel="stylesheet" href="../CSS/program.css">
 </head>
 <body>
-     <?php include 'header.php'?>
-    <h1>This is About Us page</h1>
+    <?php include 'header.php'?>
+    <h1>This is Program page</h1>
 </body>
 </html>

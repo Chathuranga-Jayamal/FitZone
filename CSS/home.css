@@ -1,7 +1,7 @@
 /* introduction */
 #introduction{
     height: 100vh;
-    background-image: url('../png/image/introduction.png');
+    background-image: url('../images/photos/introduction.png');
     background-size: cover; /* Makes image responsive */
 }
 

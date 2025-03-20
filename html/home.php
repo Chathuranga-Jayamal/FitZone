@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="stylesheet" href="../CSS/home.css">
 </head>
 <body>
     <!-- introduction of the gym-->
@@ -28,9 +28,9 @@
         <br> Sign up, train smarter, and reach your fitness goals with ease."</h5>
         </div>
         <div class="overview-img-container">
-        <img class="overview-img2 background-overview-img" src="./png/image/body1.png" alt="">
-        <img class="overview-img3 background-overview-img" src="./png/image/body3.png" alt="">
-        <img class="overview-img1"  src="./png/image/body5.png" alt="">
+        <img class="overview-img2 background-overview-img" src="../images/photos/body1.png" alt="">
+        <img class="overview-img3 background-overview-img" src="../images/photos/body3.png" alt="">
+        <img class="overview-img1"  src="../images/photos/body5.png" alt="">
         </div>
     </section>
     <section id="programs">

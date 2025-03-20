@@ -19,11 +19,11 @@
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3"><a class="text-body-secondary" href="https://www.tiktok.com/@chathuranga_jayamal">
-        <img class="tiktokicon" width="40" height="40" src="./png/tiktok.png"></a></li>
+        <img class="tiktokicon" width="40" height="40" src="../images/logos/tiktok.png"></a></li>
       <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/chathuranga_jayamal.01/">
-        <img class="instagramicon" width="40" height="40" src="./png/instagram.png"></a></li>
+        <img class="instagramicon" width="40" height="40" src="../images/logos/instagram.png"></a></li>
       <li class="ms-3"><a class="text-body-secondary" href="https://web.facebook.com/chathuranga.jayamal.334">
-        <img class="facebookicon" width="40" height="40" src="./png/facebook.png"></a></li>
+        <img class="facebookicon" width="40" height="40" src="../images/logos/facebook.png"></a></li>
     </ul>
   </footer>
 </div>
