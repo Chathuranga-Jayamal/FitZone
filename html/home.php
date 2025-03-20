@@ -18,20 +18,49 @@
         <button type="button" onclick="window.location.href='singup.php';" class="btn btn-primary btn-lg">Sign-up</button>
         </div>
         </div>
-
+        
+        <!-- Overview -->
     </section>
     <section id="overview">
         <div class="overview-container">
-        <h5>"FitZone Fitness Center brings you expert training, 
-        <br>top-notch equipment, and dynamic workout programs. 
-        <br>From personal training to group classes,<br> everything is designed to help you stay strong and motivated.
-        <br> Sign up, train smarter, and reach your fitness goals with ease."</h5>
+            <div class="overview-title">
+                <h1 style="color: white ; font-size: 4rem">PUSH YOUR LIMITS FORWARD</h1>
+            </div>
+            <div class="overview-body">
+              <div class="Modern-equipment overview-card">
+                <div class="overview-circle">
+                    <img class="overview-icon" height="70" width="70" src="../images/logos/gym.png" alt="gym-equipment">
+                </div>
+                <h4>Modern Equipment</h4>
+                <p>"Upgrade your fitness game with cutting-edge gym equipment, designed for strength, endurance, and peak performance."</p>
+              </div>
+              <div class="professional-training overview-card">
+               <div class="overview-circle">
+                 <img class="overview-icon" height="70" width="70" src="../images/logos/muscle.png" alt="muscle">
+               </div>
+               <h4>Professional Training</h4>
+               <p>"Experience elite professional training with expert guidance, advanced techniques, and top-tier fitness programs."</p>
+              </div>
+              <div class="Healthy-nutrition overview-card">
+              <div class="overview-circle">
+                <img class="overview-icon" height="70" width="70" src="../images/logos/meal.png" alt="food">
+              </div>
+              <h4>Healthy Nutrition</h4>
+              <p>"Nourish your body with nutritious meals, balanced diets, and expert guidance for a healthy lifestyle."</p>
+              </div>
+              <div class="Unique-needs overview-card">
+              <div class="overview-circle">
+                <img class="overview-icon" height="90" width="90" src="../images/logos/heart.png" alt="heart">
+              </div>
+              <h4>Unique Needs</h4>
+              <h6>"Tailor fitness plans to meet your specific fitness goals, whether you're a beginner or an experienced athlete."</h6>
+              </div>
+
+
+            </div>
+
         </div>
-        <div class="overview-img-container">
-        <img class="overview-img2 background-overview-img" src="../images/photos/body1.png" alt="">
-        <img class="overview-img3 background-overview-img" src="../images/photos/body3.png" alt="">
-        <img class="overview-img1"  src="../images/photos/body5.png" alt="">
-        </div>
+        
     </section>
     <section id="programs">
 
