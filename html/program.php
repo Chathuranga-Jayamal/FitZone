@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program</title>
-    <link rel="stylesheet" href="../CSS/program.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FitZone/CSS/program.css?v=1.0">
 </head>
-<body>
-    <?php include 'header.php'?>
-    <h1>This is Program page</h1>
+<body background-color="black">
+    <section id="introduction">
+        <?php include 'header.php' ?>
+        <div class="introduction-container">
+            
+        <h1>Your Fitness, Your Way</h1>
+        <h3>👇 Find the RIGHT Program.</h3>
+
+        </div>
+    </section>
+    <section id="programs-statistics">
+        <div class="data-cantainer">
+           
+        </div>
+    </section>
 </body>
+    
 </html>

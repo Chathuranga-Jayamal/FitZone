@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="/FitZone/CSS/home.css?v=1.0">
 </head>
 <body>
     <!-- introduction of the gym-->
@@ -18,9 +18,9 @@
         <button type="button" onclick="window.location.href='singup.php';" class="btn btn-primary btn-lg">Sign-up</button>
         </div>
         </div>
-        
-        <!-- Overview -->
     </section>
+    
+    <!-- Overview -->
     <section id="overview">
         <div class="overview-container">
             <div class="overview-title">

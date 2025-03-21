@@ -18,8 +18,8 @@
       </div>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="./home.php" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="./program.php" class="nav-link px-2">Proram</a></li>
+        <li><a href="./home.php" class="nav-link px-2">Home</a></li>
+        <li><a href="./program.php" class="nav-link px-2">Program</a></li>
         <li><a href="./membership.php" class="nav-link px-2">Membership</a></li>
         <li><a href="./blog.php" class="nav-link px-2">Blogs</a></li>
         <li><a href="./about.php" class="nav-link px-2">About</a></li>
