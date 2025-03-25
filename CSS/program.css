@@ -1,6 +1,6 @@
 /* Introduction section */
 #introduction {
-    height: 90vh;
+    min-height: 90vh;
     background-image: url('../images/photos/introduction3.png');
     background-size: cover;
     background-position: center;
@@ -30,15 +30,16 @@
 /* Program overview */
 .program-overview-container {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 40px;
 }
 
 .program-overview-card {
-    width: 25%;
-    height: 50vh;
+    width: 30vw;
+    height: 60vh;
     margin: 2%;
     border-radius: 10px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
@@ -53,23 +54,52 @@
 
 /* program */
 
-.program-container{
-    position: relative;
-    width: 100%;
+#programs {
     min-height: 100vh;
+    padding: 50px 0;
 }
 
-.program-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10vh;
-}
-
-.program-title h1{
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 3rem;
+.program-title h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
     font-weight: bolder;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.group-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.group-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.group-title h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.group-description p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+@media (max-width: 991px) {
+    .group-details {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .group-description p {
+        text-align: center;
+    }
 }
