@@ -10,8 +10,8 @@
 
 <body>
     <section id="introduction">
+    <?php include 'header.php'; ?>
       <div class="container col-lg-12 align-items-center">
-      <?php include 'header.php'; ?>
         <div class="introduction-container">
             <h1>Your Fitness, Your Way</h1>
             <h3>👇 Find the RIGHT Program.</h3>

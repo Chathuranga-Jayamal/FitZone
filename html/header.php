@@ -4,37 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
+    <!-- CSS -->
+     <link rel="stylesheet" href="../CSS/header.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
   </head>
 <body>
 
 <!-- Navigation Bar & Logo-->
-    <div class="container">
-     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="./home.php" class="d-inline-flex link-body-emphasis text-decoration-none">
-        <img src="../images/logos/logo.png" alt="FitZone Logo" width="60%" height="50%">
-        </a>
-      </div>
+    
+      <nav>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="./home.php" class="nav-link px-2">Home</a></li>
-        <li><a href="./program.php" class="nav-link px-2">Program</a></li>
-        <li><a href="./membership.php" class="nav-link px-2">Membership</a></li>
-        <li><a href="./blog.php" class="nav-link px-2">Blogs</a></li>
-        <li><a href="./about.php" class="nav-link px-2">About</a></li>
-        <li><a href="./contact.php" class="nav-link px-2">Contact</a></li>
+      <ul class="slidebar">
+        <div class="close-button" onclick=hideSlidebar()>
+          <i class="material-icons">close</i>
+        </div>
+        <li><a href="./home.php">Home</a></li>
+        <li><a href="./program.php">Program</a></li>
+        <li><a href="./membership.php">Membership</a></li>
+        <li><a href="./blog.php">Blogs</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+
+        <div class="auth-buttons">
+          <button type="button" onclick="window.location.href='login.php';" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" onclick="window.location.href='singup.php';" class="btn btn-primary">Sign-up</button>
+        </div>
       </ul>
 
-      <div class="col-md-3 text-end">
-        <button type="button" onclick="window.location.href='login.php';" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" onclick="window.location.href='singup.php';" class="btn btn-primary">Sign-up</button>
-      </div>
-     </header>
-    </div>
+      <ul >
+        <div class="menu-button" onclick=showSlidebar()>
+          <i class="material-icons" style="font-size: 36px;">menu</i>
+        </div>
+        <li class="logo"><a href="./home.php">FitZone</a></li>
+        <li class="hideOnMobile" ><a href="./home.php">Home</a></li>
+        <li class="hideOnMobile"><a href="./program.php">Program</a></li>
+        <li class="hideOnMobile"><a href="./membership.php">Membership</a></li>
+        <li class="hideOnMobile"><a href="./blog.php">Blogs</a></li>
+        <li class="hideOnMobile"><a href="./about.php">About</a></li>
+        <li class="hideOnMobile"><a href="./contact.php">Contact</a></li>
+
+        <div class="col-md-3 text-end hideOnMobile">
+          <button type="button" onclick="window.location.href='login.php';" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" onclick="window.location.href='singup.php';" class="btn btn-primary">Sign-up</button>
+        </div>
+      </ul>
+      </nav>
+
+      <script>
+        function showSlidebar(){
+          const slidebar = document.querySelector('.slidebar');
+          slidebar.style.display = 'flex'
+        }
+
+        function hideSlidebar(){
+          const slidebar =document.querySelector(".slidebar");
+          slidebar.style.display = 'none';
+        }
+      </script>
+    
+    
 </body>
 </html>
