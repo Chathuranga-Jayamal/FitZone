@@ -18,8 +18,10 @@ nav ul{
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding: 0;
+    position: relative;
 }
 
 nav li{
@@ -40,7 +42,13 @@ nav a:hover{
 }
 
 .logo{
-    margin-right: auto;
+    order: 0;
+}
+
+.menu{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .menu-button{
@@ -48,6 +56,7 @@ nav a:hover{
     position: absolute;
     left: 30px;
     top: 10px;
+    order: 1;
 }
 
 
@@ -101,15 +110,18 @@ nav a:hover{
 
 
 @media(max-width:800px){
-    .container{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
     .hideOnMobile{
         display: none;
     }
     .menu-button{
         display: block;
         margin-left: 0px;
+    }
+    nav ul{
+        justify-content: space-between;
+    }
+    .logo{
+        margin-left: auto;
+        order: 2;
     }
 }

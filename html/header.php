@@ -43,12 +43,12 @@
           <i class="material-icons" style="font-size: 36px;">menu</i>
         </div>
         <li class="logo"><a href="./home.php">FitZone</a></li>
-        <li class="hideOnMobile" ><a href="./home.php">Home</a></li>
-        <li class="hideOnMobile"><a href="./program.php">Program</a></li>
-        <li class="hideOnMobile"><a href="./membership.php">Membership</a></li>
-        <li class="hideOnMobile"><a href="./blog.php">Blogs</a></li>
-        <li class="hideOnMobile"><a href="./about.php">About</a></li>
-        <li class="hideOnMobile"><a href="./contact.php">Contact</a></li>
+        <li class="hideOnMobile menu" ><a href="./home.php">Home</a></li>
+        <li class="hideOnMobile menu"><a href="./program.php">Program</a></li>
+        <li class="hideOnMobile menu"><a href="./membership.php">Membership</a></li>
+        <li class="hideOnMobile menu"><a href="./blog.php">Blogs</a></li>
+        <li class="hideOnMobile menu"><a href="./about.php">About</a></li>
+        <li class="hideOnMobile menu"><a href="./contact.php">Contact</a></li>
 
         <div class="col-md-3 text-end hideOnMobile">
           <button type="button" onclick="window.location.href='login.php';" class="btn btn-outline-primary me-2">Login</button>
