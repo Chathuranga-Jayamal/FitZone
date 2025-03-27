@@ -23,7 +23,7 @@
 
       <ul class="slidebar">
         <div class="close-button" onclick=hideSlidebar()>
-          <i class="material-icons">close</i>
+          <i class="material-icons" style="color: white;">close</i>
         </div>
         <li><a href="./home.php">Home</a></li>
         <li><a href="./program.php">Program</a></li>
@@ -40,17 +40,20 @@
 
       <ul >
         <div class="menu-button" onclick=showSlidebar()>
-          <i class="material-icons" style="font-size: 36px;">menu</i>
+          <i class="material-icons" style="font-size: 36px; color: white;">menu</i>
         </div>
         <li class="logo"><a href="./home.php">FitZone</a></li>
+        
+        <div class="container">
         <li class="hideOnMobile menu" ><a href="./home.php">Home</a></li>
         <li class="hideOnMobile menu"><a href="./program.php">Program</a></li>
         <li class="hideOnMobile menu"><a href="./membership.php">Membership</a></li>
         <li class="hideOnMobile menu"><a href="./blog.php">Blogs</a></li>
         <li class="hideOnMobile menu"><a href="./about.php">About</a></li>
         <li class="hideOnMobile menu"><a href="./contact.php">Contact</a></li>
+        </div>
 
-        <div class="col-md-3 text-end hideOnMobile">
+        <div class="col-md-2 text-end hideOnMobile">
           <button type="button" onclick="window.location.href='login.php';" class="btn btn-outline-primary me-2">Login</button>
           <button type="button" onclick="window.location.href='singup.php';" class="btn btn-primary">Sign-up</button>
         </div>
