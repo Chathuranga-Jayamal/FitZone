@@ -38,8 +38,9 @@
 }
 
 .program-overview-card {
-    width: 30vw;
-    height: 60vh;
+    width: auto;
+    max-width: 400px;
+    height: auto;
     margin: 2%;
     border-radius: 10px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
@@ -57,7 +58,10 @@
 #programs {
     min-height: 100vh;
     padding: 50px 0;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .program-title h1 {
     font-family: 'Roboto', sans-serif;
@@ -69,9 +73,9 @@
 
 .group-img {
     border-radius: 10px;
-    width: 100%;
     height: auto;
-    object-fit: cover;
+    /* object-fit: cover; */
+    max-width: 100%;
 }
 
 .group-details {
@@ -93,13 +97,58 @@
     margin: 20px 0;
 }
 
+.container{
+    margin: auto;
+}
+
+.individual-img{
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+}
+
+.individual-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.individual-title h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.individual-description p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
 @media (max-width: 991px) {
+    .program-overview-card {
+        height: auto;
+        width: 80vw;
+    }
     .group-details {
-        margin-top: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
         text-align: center;
+        padding: 10px;
+        height: auto;
     }
 
     .group-description p {
         text-align: center;
     }
+
+    .individual-details {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        padding: 10px;
+        height: auto;
+    }
+
+    
 }
