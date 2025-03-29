@@ -38,7 +38,7 @@
 }
 
 .program-overview-card {
-    width: auto;
+    width: 100%;
     max-width: 400px;
     height: auto;
     margin: 2%;
@@ -149,6 +149,83 @@
         padding: 10px;
         height: auto;
     }
+    
+}
 
+/* Coachers Section */
+.coach-main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.coach-title h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.coach-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+    min-height: 50vh;
+    width: 100%;
+
+}
+
+.coach-card{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.coach-img-container{
+    min-height: 50vh;
+    /* background-image: url('../images/photos/Coach1.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.coach-img-1{
+    background-image: url('../images/photos/Coach1.jpg');
+}
+.coach-img-2{
+    background-image: url('../images/photos/Coach2.jpg');
+}
+.coach-img-3{
+    background-image: url('../images/photos/Coach3.jpg');
+}
+
+.coach-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media (max-width: 991px) {
+    .coach-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .coach-card {
+        height: auto;
+        width: 80vw;
+    }
     
 }

@@ -44,7 +44,7 @@
         </div>
         <li class="logo"><a href="./home.php">FitZone</a></li>
         
-        <div class="container">
+        <div class="container nav-container">
         <li class="hideOnMobile menu" ><a href="./home.php">Home</a></li>
         <li class="hideOnMobile menu"><a href="./program.php">Program</a></li>
         <li class="hideOnMobile menu"><a href="./membership.php">Membership</a></li>
