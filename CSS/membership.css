@@ -1,0 +1,41 @@
+#introduction{
+    height: 90vh;
+    background-image: url("../images/photos/membership1.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+
+.introduction-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+}
+
+.introduction-container h1{
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    #introduction{
+        height: 80vh;
+        background-position: center;
+    }
+
+    .introduction-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introduction-button button{
+        margin: 0 0 30px 0;
+    }
+}

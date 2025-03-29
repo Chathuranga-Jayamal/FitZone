@@ -36,7 +36,7 @@
                 <img height="50" width="50" src="../images/logos/meditation.png" alt="">
                 <h4 style="font-weight: bold;">Level Up With Classes</h4>
                 <p>Explore advanced classes like cardio, strength training, and yoga to boost endurance, flexibility, and power.</p>
-                <button type="button" class="btn btn-primary"> 🡻 See More</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='#classes'"> 🡻 See More</button>
             </div>
         </div>
       </div>
@@ -48,16 +48,17 @@
         <div class="container mb-5">
             <div class="group-program row align-items-center ">
                 <div class=" col-lg-6 order-lg-1 mt-0 mb-0">
-                    <img src="../images/photos/group2.jpg" alt="Group Fitness Program" class="group-img img-fluid">
+                    <img src="../images/photos/group2.jpg" alt="Specialized Fitness Program" class="group-img img-fluid">
                 </div>
                 <div class="group-details col-lg-6 order-lg-2 mt-0">
                         <div class="group-title">
-                            <h2>Group Program</h2>
+                            <h2>Specialized Programs</h2>
                         </div>
                         <div class="group-description">
-                            <p>At FitZone Fitness Center, we believe that working out together creates motivation, 
-                            energy, and lasting results. Our Group Training Programs are designed to bring people together in a dynamic and supportive 
-                            environment, making fitness both effective and enjoyable.</p>
+                            <p>At FitZone Fitness Center, we understand that every fitness journey is unique. 
+                                Our Specialized Programs are tailored to meet specific goals, whether it's weight loss, 
+                                muscle building, or recovery from injuries. With expert guidance, customized workout plans, 
+                                and a results-driven approach, we help you achieve your personal best in a safe and supportive environment.</p>
                         </div>
                         <div>
                             <a href="program.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
@@ -72,7 +73,7 @@
             </div>
             <div class="individual-details col-lg-6 order-lg-1 mt-0 mb-0">
                 <div class="individual-title">
-                    <h2>Individual Program</h2>
+                    <h2>Personalized Program</h2>
                 </div>
                 <div class="individual-description">
                     <p>At FitZone Fitness Center, we understand that individual training is essential for 
