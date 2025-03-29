@@ -128,7 +128,30 @@
 
     </section>
 
-    
+    <section id="classes">
+        <div class="container class-container">
+            <div class="class-logo">
+                <!-- <img height="300" width="300" src="../images/photos/yogalogo.jpg" alt="yoga logo"> -->
+            </div>
+            <div class="class-title mt-2 mb-2">
+                <h1 class="fw-bolder">Join Our Classes to Reach Your <br> Full Potential</h1>
+            </div>
+            <div class="class-description">
+                <p >Discover a fitness experience tailored to your needs! 
+                    Our gym classes offer a perfect blend of cardio workouts to boost endurance, 
+                    strength training to build muscle and power, and yoga sessions to enhance flexibility and mindfulness. 
+                    Whether you're a beginner or a seasoned athlete, our expert instructors will guide you toward achieving 
+                    your fitness goals in a supportive and energetic environment. Join us today and take the first step toward a healthier, 
+                    stronger you!</p>
+            </div>
+            <div class="class-buttons">
+                <button type="button" class="btn btn-primary btn-lg me-4">👉 See More</button>
+                <button type="button" class="btn btn-outline-primary btn-lg">Register Now</button>
+            </div>
+        </div>
+    </section>
+
+    <?php include 'footer.php'?>
 </body>
 
 </html>
