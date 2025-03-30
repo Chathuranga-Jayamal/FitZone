@@ -53,6 +53,91 @@
 
         </div>
     </section>
+    <section id="features">
+        <div class="container features-container">
+            <div class="features-title">
+                <h1>What We Offer</h1>
+            </div>
+            <div class="features-items">
+                <div class="features-items-row">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">fitness_center</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Gym Equipment</h3>
+                            <p>State-of-the-art machines and tools designed to enhance your workout experience.</p>
+                        </div>
+                    </div>
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">groups</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Group Classes</h3>
+                            <p>Engaging group sessions led by expert instructors to keep you motivated and fit.</p>
+                        </div>
+                    </div>
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">local_dining</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Nutrition Plan</h3>
+                            <p>Tailored meal plans to fuel your body and support your fitness goals.</p>
+                        </div>
+                    </div>
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">workspaces</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Workshops</h3>
+                            <p>Exclusive workshops to improve your skills and knowledge in fitness and wellness.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-items-row">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">handshake</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>VIP zones</h3>
+                            <p>Private, high-end training zones for a focused and premium workout experience.</p>
+                        </div>
+                    </div>
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">self_improvement</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Yoga Studio</h3>
+                            <p>A serene space offering yoga classes to help improve flexibility, strength, and mindfulness.</p>
+                        </div>
+                    </div>
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">shower</i></i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Washroom</h3>
+                            <p>Clean and modern washrooms offering comfort and convenience after every session.</p>
+                        </div>
+                    </div>
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <i class="material-icons">lock</i>
+                        </div>
+                        <div class="features-details">
+                            <h3>Locker Room</h3>
+                            <p>Secure and spacious locker rooms to store your belongings while you train.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
