@@ -17,7 +17,7 @@
             </div>
             <div class="introduction-button ">
                 <button class="btn btn-outline-light btn-lg me-4" onclick="location.href='./program.php'">choose your program</button>
-                <button class="btn btn-primary btn-lg">contact us</button>
+                <button class="btn btn-primary btn-lg" onclick="window.open('https://wa.me/94761894986', '_blank')" >contact us</button>
             </div>
         </div>
     </section>

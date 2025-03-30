@@ -13,13 +13,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
   margin-top: 10%;
 }
 
 .introduction-container h1 {
   font-size: 6rem;
+  text-align: center;
   margin-bottom: 20px;
 }
 

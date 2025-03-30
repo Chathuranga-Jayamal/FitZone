@@ -81,7 +81,7 @@
                             reach your full potential.</p>
                     </div>
                     <div>
-                        <a href="program.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
+                        <a href="personalized.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
                     </div>
                 </div>
             </div>
