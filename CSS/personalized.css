@@ -109,12 +109,13 @@
 /* feachers */
 #feachers {
   min-width: 100%;
-  min-height: 50vh;
+  min-height: 60vh;
 }
 
 .features-container {
   display: flex;
   flex-direction: column;
+  padding-top: 5vh;
 }
 
 .features-title {
@@ -165,5 +166,134 @@
   .features-item {
     max-width: 80%;
     margin-bottom: 1rem;
+  }
+}
+
+/* workouts */
+
+.workouts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.workouts-details {
+  width: 80%;
+  text-align: center;
+}
+
+.workouts-details p {
+  font-size: 1.2rem;
+}
+
+.workouts-images {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.workouts-image {
+  list-style: none;
+  width: 400px;
+  height: 550px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.workouts-image h2 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.workouts-image p {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 80%;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+.workouts-1 {
+  background-image: url("../images/photos/strength_training.png");
+}
+
+.workouts-2 {
+  background-image: url("../images/photos/Cardio.jpg");
+}
+
+.workouts-3 {
+  background-image: url("../images/photos/LatPulldown.jpg");
+}
+
+.workouts-4 {
+  background-image: url("../images/photos/cable.jpg");
+}
+
+.workouts-5 {
+  background-image: url("../images/photos/powerLift.jpg");
+}
+
+/* How it works sectiion */
+
+.how-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  padding-top: 50px;
+  min-height: 70vh;
+}
+
+.how-description {
+  padding-left: 15vh;
+  padding-right: 15vh;
+}
+
+.how-description p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.how-buttons {
+  margin-top: 20px;
+  width: 100%;
+  height: 10vh;
+}
+
+@media (max-width: 991px) {
+  .how-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-height: 1000px) {
+  .how-container {
+    min-height: 50vh;
   }
 }
