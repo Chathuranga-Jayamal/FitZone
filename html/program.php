@@ -61,7 +61,7 @@
                             and a results-driven approach, we help you achieve your personal best in a safe and supportive environment.</p>
                     </div>
                     <div>
-                        <a href="program.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
+                        <a href="specialized.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
                     </div>
                 </div>
             </div>
