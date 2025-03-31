@@ -103,7 +103,7 @@
 /* weight-data-section */
 
 .weight-container {
-  height: 50vh;
+  min-height: 80vh;
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
@@ -135,34 +135,14 @@
   }
 }
 
-/* Weght-loss */
-.weight-img-feature {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
-}
-
-.weight-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.weight-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
+/* Feature */
 
 .weight-feature {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 20px;
+  min-height: 50vh;
 }
 
 .feature-row {

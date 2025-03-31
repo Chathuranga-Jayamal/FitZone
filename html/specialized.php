@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specialized</title>
+    <!-- Swiper CDN CSS link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- css link -->
     <link rel="stylesheet" href="/FitZone/CSS/specialized.css">
 </head>
@@ -48,37 +50,50 @@
                 <p>With a tailored fitness plan, progress tracking, and ongoing motivation, you'll build healthier habits and stay
                     committed to your goals. Join us and take the first step toward a stronger, leaner, and more confident you!</p>
             </div>
-            <div class="weight-img-feature gap-5">
-                <img class="weight-img" height="600px" width="400px" src="../images/photos/weightloss.jpg" alt="weightloss">
-                <div class="weight-feature gap-5">
-                    <div class="feature-row gap-3">
-                        <div class="feature">
-                            <i class="material-icons">fitness_center</i>
-                            <h4>Personalized Workout Plans</h4>
-                            <p>Tailored exercise routines designed to maximize fat burning while preserving muscle, ensuring sustainable weight loss.</p>
-                        </div>
-                        <div class="feature">
-                            <i class="material-icons">local_dining</i>
-                            <h4>Expert Nutrition Guidance</h4>
-                            <p>Customized meal plans and nutritional advice to fuel your body efficiently and promote healthy weight loss.</p>
-                        </div>
+            <div class="container weight-feature gap-3 mt-5">
+                <div class="feature-row gap-3">
+                    <div class="feature">
+                        <i class="material-icons">fitness_center</i>
+                        <h4>Personalized Workout Plans</h4>
+                        <p>Tailored exercise routines designed to maximize fat burning while preserving muscle, ensuring sustainable weight loss.</p>
                     </div>
-                    <div class="feature-row gap-3">
-                        <div class="feature">
-                            <i class="material-icons">pending</i>
-                            <h4>Progress Tracking</h4>
-                            <p>Weight logs, body measurements, and progress reports to keep you motivated and on track toward your goals.</p>
-                        </div>
-                        <div class="feature">
-                            <i class="material-icons">settings_accessibility</i>
-                            <h4>Coaching & Support System</h4>
-                            <p>Access to fitness experts, trainers, and a supportive community to guide, motivate, and encourage you throughout your journey.</p>
-                        </div>
+                    <div class="feature">
+                        <i class="material-icons">local_dining</i>
+                        <h4>Expert Nutrition Guidance</h4>
+                        <p>Customized meal plans and nutritional advice to fuel your body efficiently and promote healthy weight loss.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="material-icons">widgets</i>
+                        <h4>Exclusive Member Perks</h4>
+                        <p>JGain access to special discounts on supplements, fitness gear, and exclusive member-only workout sessions or classes.</p>
+                    </div>
+                </div>
+                <div class="feature-row gap-3">
+                    <div class="feature">
+                        <i class="material-icons">data_exploration</i>
+                        <h4>Progress Tracking</h4>
+                        <p>Weight logs, body measurements, and progress reports to keep you motivated and on track toward your goals.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="material-icons">settings_accessibility</i>
+                        <h4>Coaching & Support System</h4>
+                        <p>Access to fitness experts, trainers, and a supportive community to guide, motivate, and encourage you throughout your journey.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="material-icons">schedule</i>
+                        <h4>24/7 Gym Access & Support</h4>
+                        <p>Enjoy round-the-clock access to our state-of-the-art gym facilities, along with on-demand virtual support from trainers to keep you on track anytime, anywhere.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <?php include 'footer.php' ?>
+    <!-- Swiper JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- custom js link -->
+     <script src="/FitZone/JS/swiper.js"></script>
 </body>
 
 </html>
