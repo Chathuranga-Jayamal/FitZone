@@ -97,6 +97,7 @@
 @media (max-width: 991px) {
   .overview-container {
     flex-direction: column;
+    gap: 7vh;
   }
 
   .class-container {
