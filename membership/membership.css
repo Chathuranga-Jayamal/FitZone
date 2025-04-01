@@ -1,0 +1,269 @@
+/* introduction section */
+#introduction {
+  height: 90vh;
+  background-image: url("./image/introduction.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 10%;
+}
+
+.introduction-container h1 {
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  #introduction {
+    height: 80vh;
+    background-position: center;
+  }
+
+  .introduction-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .introduction-button button {
+    margin: 0 0 30px 0;
+  }
+}
+
+@media (min-height: 1000px) {
+  #introduction {
+    height: 70vh;
+  }
+}
+
+/* personalized membership section */
+
+#personalized {
+  width: 100%;
+  min-height: 70vh;
+}
+
+.personalized-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.personalized-details h1 {
+  font-size: 3rem;
+}
+
+.personalized-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* price section */
+.personalized-pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  min-height: 60vh;
+  flex-wrap: wrap;
+}
+
+@media (min-height: 1000px) {
+  .personalized-pricing {
+    align-items: center;
+    min-height: 40vh;
+    max-height: 50vh;
+  }
+}
+
+/* Pricing Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: #fff;
+}
+
+.card-title {
+  width: 100%;
+}
+
+.card-title h1 {
+  color: #007bff;
+}
+
+/* Price Section */
+.card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.card-price .currency {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.card-price .price {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #222;
+}
+
+.per-month {
+  font-size: 1rem;
+  color: gray;
+  margin-top: -5px;
+}
+
+/* Description */
+.card-description {
+  text-align: start;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Icon Styling */
+.material-icons {
+  color: #28a745;
+  font-size: 20px;
+}
+
+/* Button */
+.card-button {
+  margin-top: 15px;
+}
+
+.card-button .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #007bff;
+  color: #007bff;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-button .btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* specialized membersip section */
+
+#specialized {
+  width: 100%;
+  min-height: 70vh;
+}
+
+.specialized-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.specialized-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+
+  margin-right: 5vw;
+}
+
+.specialized-title h1 {
+  font-size: 2.5rem;
+}
+
+.specialized-image {
+  width: 100%;
+  min-height: 50vh;
+  background-image: url("./image/specialized.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .specialized-container {
+    flex-direction: column;
+  }
+  .specialized-details {
+    width: 95vw;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-right: 0;
+  }
+  .specialized-image {
+    width: 100vw;
+  }
+}
+
+@media (min-height: 1000px) {
+  .specialized-image {
+    min-height: 30vh;
+    max-height: 40vh;
+  }
+}
+
+/* Specialized Pricing cards */
+
+/* price section */
+.specialized-pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  min-height: 60vh;
+  flex-wrap: wrap;
+}
+
+@media (min-height: 1000px) {
+  .specialized-pricing {
+    align-items: center;
+    min-height: 40vh;
+    max-height: 50vh;
+  }
+}
