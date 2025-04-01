@@ -293,3 +293,100 @@
     text-align: center;
   }
 }
+
+/* athlete-section */
+
+#athletic-section {
+  width: 100%;
+  min-height: 50vh;
+  margin-top: 10vh;
+}
+
+.athletic-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.athletic-details {
+  text-align: center;
+}
+
+.athletic-details h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.athletic-details p {
+  font-size: 1.2rem;
+  padding: 0 5vw;
+}
+
+/* images-container */
+
+.athletic-images {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.athletics-image {
+  list-style: none;
+  width: 400px;
+  height: 550px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.athletics-image h1 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+  text-align: center;
+  max-width: 90%;
+  padding: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.img-1 {
+  background-image: url("./image/cricket.jpg");
+}
+
+.img-2 {
+  background-image: url("./image/runner.jpg");
+}
+
+.img-3 {
+  background-image: url("./image/football.jpg");
+}
+
+.img-4 {
+  background-image: url("./image/Basketball.jpg");
+}
+
+.img-5 {
+  background-image: url("./image/swimmer.jpg");
+}

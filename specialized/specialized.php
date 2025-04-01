@@ -34,7 +34,7 @@
             <div class="athletic-training options-item col-sm-10 col-md-5 col-lg-3">
                 <h4>Athletic Training</h4>
                 <p>We offer programs to help you improve your athletic performance and overall fitness.</p>
-                <button class="btn btn-outline-primary">See More</button>
+                <button class="btn btn-outline-primary" onclick="location.href='#athletic-section'">See More</button>
             </div>
         </div>
     </section>
@@ -115,6 +115,62 @@
                     <i class="material-icons">restaurant</i>
                     <h4>Nutrition and Supplement Support</h4>
                     <p>Guidance on proper nutrition and access to protein shakes and supplements to fuel muscle growth and recovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="athletic-section">
+        <div class="container athletic-container">
+            <div class="athletic-details">
+                <h1>Elite Performance Training</h1>
+                <P>Unleash your full athletic potential with our Elite Performance Training program at FitZone!
+                    Designed specifically for athletes and sports enthusiasts, this specialized program focuses on enhancing strength,
+                    speed, endurance, and agility. Whether you're a professional competitor or an aspiring athlete, our expert coaches
+                    provide tailored training routines, sport-specific conditioning, and injury prevention strategies to elevate your game.
+                    Train like a champion, push your limits, and dominate your sport with FitZone!</P>
+            </div>
+            <div class="container feacher-container mt-5">
+                <div class="feature-row gap-3">
+                    <div class="feature">
+                        <i class="material-icons">sports_cricket</i>
+                        <h4>Sport-Specific Training</h4>
+                        <p>Customized workout plans and drills tailored to your sport to enhance performance, agility, and endurance.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="material-icons">personal_injury</i>
+                        <h4>Recovery & Injury Prevention</h4>
+                        <p>Access to physiotherapy, mobility exercises, and recovery techniques to keep you injury-free and performing at your best.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="material-icons">trending_up</i>
+                        <h4>Performance Tracking & Coaching</h4>
+                        <p>Expert guidance with progress tracking, biomechanical analysis, and personalized feedback to maximize your athletic potential.</p>
+                    </div>
+                </div>
+            </div>
+             <div class=" container swiper mt-5">
+                <div class="athletics-images card-wrapper">
+                    <ul class="athletics-images-list swiper-wrapper p-0">
+                        <li class="swiper-slide athletics-image img-1">
+                            <h1>"Strength training and agility drills improve power, reflexes, and endurance for better performance on the field."</h1>
+                        </li>
+                        <li class="swiper-slide athletics-image img-2">
+                            <h1>"Targeted gym workouts enhance leg strength, core stability, and stamina to boost speed and endurance."</h1>
+                        </li>
+                        <li class="swiper-slide athletics-image img-3">
+                            <h1>"Strength and conditioning exercises increase explosive power, agility, and injury resistance for peak gameplay"</h1>
+                        </li>
+                        <li class="swiper-slide athletics-image img-4">
+                            <h1>"Gym training enhances jumping ability, muscle endurance, and overall strength for superior court performance."</h1>
+                        </li>
+                        <li class="swiper-slide athletics-image img-5">
+                            <h1>"Resistance and flexibility training improve stroke power, endurance, and core stability for faster swim times."</h1>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
