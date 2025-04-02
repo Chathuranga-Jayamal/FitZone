@@ -88,11 +88,11 @@
         <div class="container yoga-container">
             <div class="yoga-details">
                 <h1>Find Your Balance with Yoga!</h1>
-                <p>Looking to strengthen your body, calm your mind, and improve flexibility? Our Yoga classes offer the perfect 
-                    escape from daily stress while helping you build core strength, enhance mobility, and find inner peace. 
-                    With expert instructors guiding you through every movement, our sessions cater to all levels, from beginners 
-                    to advanced practitioners. Whether you're flowing through poses, holding deep stretches, or practicing mindful 
-                    breathing, each class is designed to leave you feeling refreshed and rejuvenated. Step onto the mat, take a 
+                <p>Looking to strengthen your body, calm your mind, and improve flexibility? Our Yoga classes offer the perfect
+                    escape from daily stress while helping you build core strength, enhance mobility, and find inner peace.
+                    With expert instructors guiding you through every movement, our sessions cater to all levels, from beginners
+                    to advanced practitioners. Whether you're flowing through poses, holding deep stretches, or practicing mindful
+                    breathing, each class is designed to leave you feeling refreshed and rejuvenated. Step onto the mat, take a
                     deep breath, and discover the power of mindful movement!</p>
 
                 <button class="btn btn-outline-primary btn-lg" onclick="location.href=''">Rgister Now</button>
@@ -103,24 +103,65 @@
             <div class="yoga-feature">
                 <i class="material-icons">compost</i>
                 <h2>Comfortable Environment</h2>
-                <p>Our peaceful, well-designed studio provides a calming atmosphere, allowing you to fully immerse yourself in your 
+                <p>Our peaceful, well-designed studio provides a calming atmosphere, allowing you to fully immerse yourself in your
                     practice and unwind from daily stress.</p>
             </div>
             <div class="yoga-feature">
                 <i class="material-icons">person_2</i>
                 <h2>Excellent Guidance</h2>
-                <p>Our experienced yoga instructors offer personalized support, ensuring proper technique and alignment while 
+                <p>Our experienced yoga instructors offer personalized support, ensuring proper technique and alignment while
                     helping you progress at your own pace.</p>
             </div>
             <div class="yoga-feature">
                 <i class="material-icons">language</i>
                 <h2>Online Sessions Available </h2>
-                <p>Can’t make it to the gym? Join our virtual yoga classes from the comfort of your home and stay consistent 
+                <p>Can’t make it to the gym? Join our virtual yoga classes from the comfort of your home and stay consistent
                     with your practice anytime, anywhere.</p>
             </div>
         </div>
     </section>
+    <section id="strength-section">
+        <div class="container strength-details-container">
+            <h1>Unleash Your Power with Strength Training!</h1>
+            <p>Ready to build muscle, boost endurance, and feel unstoppable? Our Strength Training class is designed to help you
+                lift, tone, and transform your body. With expert guidance, you'll master resistance exercises, free weights, and
+                bodyweight movements to sculpt a stronger, more confident you. Whether you're a beginner or a pro, it's time to
+                push your limits and unleash your full potential! </p>
+            <button class="btn btn-outline-primary btn-lg" onclick="location.href=''">Register Now</button>
+        </div>
 
+        <div class="container strength-features-container">
+            <div class="strength-features">
+                <div class="strength-features-row">
+                    <div class="strength-feature">
+                        <i class="material-icons">location_on</i>
+                        <h3>Dynamic Training Zones</h3>
+                        <p>Experience a mix of free weights, resistance machines, and functional movement areas tailored to target every muscle group effectively</p>
+                    </div>
+                    <div class="strength-feature">
+                        <i class="material-icons">fitness_center</i>
+                        <h3>Strength & Stamina Surge</h3>
+                        <p>Our program combines powerlifting, circuit training, and explosive movements to build not just muscle, but also endurance and agility.</p>
+                    </div>
+                </div>
+                <div class="strength-features-row">
+                    <div class="strength-feature">
+                        <i class="material-icons">bar_chart</i>
+                        <h3>Personalized Assessments</h3>
+                        <p>Get a custom evaluation to track your progress, measure muscle gains, and receive expert recommendations for continuous improvement.</p>
+                    </div>
+                    <div class="strength-feature">
+                        <i class="material-icons">ads_click</i>
+                        <h3> Goal-Specific Workouts</h3>
+                        <p>Whether you aim to build muscle, improve athletic performance, or enhance core strength, our structured plans cater to all fitness levels.</p>
+                    </div>
+                </div>
+            </div>
+            <img width="350px" height="auto" src="./image/strength.jpg" alt="strength">
+        </div>
+    </section>
+
+    <?php include '../footer/footer.php'?>
 </body>
 
 </html>

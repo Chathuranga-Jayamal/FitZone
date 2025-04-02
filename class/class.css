@@ -307,7 +307,7 @@
   margin-bottom: 15px;
 }
 
-img {
+.yoga-container img {
   width: 600px;
   height: auto;
   border-radius: 10px;
@@ -320,7 +320,7 @@ img {
     text-align: center;
   }
 
-  img {
+  .yoga-container img {
     width: 95vw;
     max-width: 500px;
   }
@@ -367,6 +367,128 @@ img {
 @media (max-width: 900px) {
   .yoga-features {
     flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* strength-training */
+
+#strength-section {
+  margin-top: 10vh;
+  padding: 40px 20px;
+}
+
+.strength-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5vh;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.strength-details-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+
+.strength-details-container p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* featuers */
+
+.strength-features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  margin-top: 5vh;
+  padding: 20px;
+}
+
+.strength-features-container img {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.strength-features-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.strength-features {
+  justify-content: center;
+  align-items: center;
+}
+
+.strength-features-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  margin-bottom: 5vh;
+}
+
+.strength-feature {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.strength-feature i {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.strength-feature h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.strength-feature p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1100px) {
+  .strength-features-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .strength-features-container img {
+    width: 90vw;
+  }
+
+  .strength-features {
+    margin-top: 10vh;
+  }
+
+  .strength-features-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 }
