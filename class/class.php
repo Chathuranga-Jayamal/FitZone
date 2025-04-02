@@ -84,6 +84,42 @@
             </div>
         </div>
     </section>
+    <section id="yoga-section">
+        <div class="container yoga-container">
+            <div class="yoga-details">
+                <h1>Find Your Balance with Yoga!</h1>
+                <p>Looking to strengthen your body, calm your mind, and improve flexibility? Our Yoga classes offer the perfect 
+                    escape from daily stress while helping you build core strength, enhance mobility, and find inner peace. 
+                    With expert instructors guiding you through every movement, our sessions cater to all levels, from beginners 
+                    to advanced practitioners. Whether you're flowing through poses, holding deep stretches, or practicing mindful 
+                    breathing, each class is designed to leave you feeling refreshed and rejuvenated. Step onto the mat, take a 
+                    deep breath, and discover the power of mindful movement!</p>
+
+                <button class="btn btn-outline-primary btn-lg" onclick="location.href=''">Rgister Now</button>
+            </div>
+            <img width="600px" height="auto" src="./image/yoga.jpg" alt="yoga-img">
+        </div>
+        <div class="container yoga-features mt-5">
+            <div class="yoga-feature">
+                <i class="material-icons">compost</i>
+                <h2>Comfortable Environment</h2>
+                <p>Our peaceful, well-designed studio provides a calming atmosphere, allowing you to fully immerse yourself in your 
+                    practice and unwind from daily stress.</p>
+            </div>
+            <div class="yoga-feature">
+                <i class="material-icons">person_2</i>
+                <h2>Excellent Guidance</h2>
+                <p>Our experienced yoga instructors offer personalized support, ensuring proper technique and alignment while 
+                    helping you progress at your own pace.</p>
+            </div>
+            <div class="yoga-feature">
+                <i class="material-icons">language</i>
+                <h2>Online Sessions Available </h2>
+                <p>Can’t make it to the gym? Join our virtual yoga classes from the comfort of your home and stay consistent 
+                    with your practice anytime, anywhere.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 
