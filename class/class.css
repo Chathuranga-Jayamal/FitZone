@@ -49,6 +49,12 @@
   margin-top: 10vh;
 }
 
+@media (min-height: 1000px) {
+  #overview {
+    min-height: 25vh;
+  }
+}
+
 .overview-container {
   display: flex;
   flex-direction: row;
@@ -105,4 +111,140 @@
     height: auto;
     max-width: 400px;
   }
+}
+
+/* cardio-class */
+
+#cardio-section {
+  margin-top: 10vh;
+  padding: 20px;
+}
+
+.cardio-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cardio-details-container h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  line-height: 1.2;
+}
+
+.cardio-details-container p {
+  font-size: 1.1rem;
+  margin: 10px 20px;
+}
+
+.btn-container {
+  margin-top: 3vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cardio-details-container h1 {
+    font-size: 2rem;
+  }
+
+  .cardio-details-container p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardio-details-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cardio-details-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .cardio-details-container p {
+    font-size: 0.95rem;
+  }
+}
+
+/* featuers */
+
+.cardio-features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  margin-top: 5vh;
+  padding: 20px;
+}
+
+.cardio-features-container img {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardio-features-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cardio-features {
+  justify-content: center;
+  align-items: center;
+}
+
+.cardio-features-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  margin-bottom: 5vh;
+}
+
+.cardio-feature {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cardio-feature i {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.cardio-feature h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.cardio-feature p {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
