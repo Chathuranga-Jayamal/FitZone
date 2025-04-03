@@ -1,0 +1,8 @@
+#MYSQL QUERY FILE
+query.txt
+
+#SCHEMA FILE
+schema.txt
+
+#CONNECTION FILE
+connection.php
