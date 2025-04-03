@@ -6,3 +6,6 @@ schema.txt
 
 #CONNECTION FILE
 connection.php
+
+#Test Password
+password.txt

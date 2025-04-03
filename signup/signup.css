@@ -59,3 +59,9 @@
     min-width: 95vw;
   }
 }
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 0px;
+}

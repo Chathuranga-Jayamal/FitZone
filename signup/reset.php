@@ -1,0 +1,4 @@
+<?php
+
+echo"Reset Password";
+?>

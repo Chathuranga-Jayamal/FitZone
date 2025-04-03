@@ -33,7 +33,7 @@
 
         <div class="auth-buttons">
           <button type="button" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
-          <button type="button" onclick="window.location.href='../singup/singup.php';" class="btn btn-primary">Sign-up</button>
+          <button type="button" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
         </div>
       </ul>
 
@@ -53,7 +53,7 @@
 
         <div class="col-md-2 text-end hideOnMobile">
           <button type="button" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
-          <button type="button" onclick="window.location.href='../singup/singup.php';" class="btn btn-primary">Sign-up</button>
+          <button type="button" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
         </div>
       </ul>
       </nav>
