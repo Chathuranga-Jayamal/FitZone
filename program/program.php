@@ -11,10 +11,9 @@
 <body>
     <section id="introduction">
         <?php include '../header/header.php'; ?>
-        <div class="container col-lg-12 align-items-center">
-            <div class="introduction-container">
-                <h1>Your Fitness, Your Way</h1>
-            </div>
+        <div class="container introduction-container">
+                <h1>Unleash Your Potential and Start Your Fitness Journey Today!</h1>
+                <button class="btn btn-outline-light btn-lg mt-3" onclick="location.href='../membership/membership.php'">Get Membership</button>
         </div>
     </section>
     <section id="programs-overview">
@@ -41,52 +40,38 @@
             </div>
         </div>
     </section>
-    <section id="programs">
-        <div class="program-title">
-            <h1>Our Programs</h1>
-        </div>
-        <div class="container mb-5">
-            <div class="group-program row align-items-center ">
-                <div class=" col-lg-6 order-lg-1 mt-0 mb-0">
-                    <img src="./image/group.jpg" alt="Specialized Fitness Program" class="group-img img-fluid">
-                </div>
-                <div class="group-details col-lg-6 order-lg-2 mt-0">
-                    <div class="group-title">
-                        <h2>Specialized Programs</h2>
-                    </div>
-                    <div class="group-description">
-                        <p>At FitZone Fitness Center, we understand that every fitness journey is unique.
-                            Our Specialized Programs are tailored to meet specific goals, whether it's weight loss,
-                            muscle building, or enhance your athletic performance. With expert guidance, customized workout plans,
-                            and a results-driven approach, we help you achieve your personal best in a safe and supportive environment.</p>
-                    </div>
-                    <div>
-                        <a href="../specialized/specialized.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
-                    </div>
-                </div>
+   <section id="programs" class="py-5">
+    <div class="container text-center mb-5">
+        <h1 class="display-4 font-weight-bold">Our Programs</h1>
+        <p class="lead text-muted">Discover fitness programs tailored to your needs</p>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="./image/group.jpg" alt="Specialized Fitness Program" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="h1 font-weight-bold">Specialized Programs</h2>
+                <p class="text-muted">Our specialized programs cater to weight loss, muscle building, and athletic performance, ensuring expert guidance, customized workouts, and a results-driven approach.</p>
+                <a href="../specialized/specialized.php" class="btn btn-primary btn-lg">Learn More</a>
             </div>
         </div>
-        <div class="container">
-            <div class="individual-program row align-items-center">
-                <div class="individual-img col-lg-6 order-lg-2 ">
-                    <img src="./image/individual.jpg" alt="individual img" class="individual-img img-fluid">
-                </div>
-                <div class="individual-details col-lg-6 order-lg-1 mt-0 mb-0">
-                    <div class="individual-title">
-                        <h2>Personalized Program</h2>
-                    </div>
-                    <div class="individual-description">
-                        <p>At FitZone Fitness Center, we understand that individual training is essential for
-                            achieving your fitness goals. Our Indivisual Training Programs offer personalized attention, guidance, and support to help you
-                            reach your full potential.</p>
-                    </div>
-                    <div>
-                        <a href="../personalized/personalized.php" class="btn btn-outline-primary btn-lg">👉 Read More</a>
-                    </div>
-                </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+            <div class="col-lg-6">
+                <h2 class="h1 font-weight-bold">Personalized Program</h2>
+                <p class="text-muted">Experience one-on-one training with our personalized programs, designed to help you reach your full potential with professional guidance and tailored fitness plans.</p>
+                <a href="../personalized/personalized.php" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="./image/individual.jpg" alt="Personalized Training" class="img-fluid rounded shadow-sm">
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <section id="coaches">
         <div class="container coach-main-container">
             <div class="coach-title">

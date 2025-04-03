@@ -1,158 +1,229 @@
-/* Introduction section */
 #introduction {
+  width: 100%;
   height: 90vh;
-  background-image: url("./image/introduction.png");
+  background-image: url("./image/introduction2.jpg");
   background-size: cover;
-  background-position: center;
-}
-
-.nav a {
-  color: white;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  position: relative;
 }
 
 .introduction-container {
   color: white;
-  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .introduction-container h1 {
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: bolder;
-  text-align: center;
+  line-height: 1.2;
 }
 
-.introduction-container h3 {
-  font-size: 3rem;
-  font-weight: bolder;
-  text-align: center;
+.introduction-container button {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  #introduction {
+    background-position: center;
+    height: 80vh;
+  }
+
+  .introduction-container h1 {
+    font-size: 3.5rem;
+  }
+
+  .introduction-container {
+    margin-top: 15%;
+  }
+
+  .introduction-container button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #introduction {
+    background-position: center;
+    height: 70vh;
+  }
+
+  .introduction-container h1 {
+    font-size: 3rem;
+  }
+
+  .introduction-container button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
 
 @media (min-height: 1000px) {
   #introduction {
-    height: 60vh;
+    height: 75vh;
   }
 }
 
-/* Program overview */
+/* program overview */
+
 .program-overview-container {
   width: 100%;
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding-top: 40px;
+}
+
+@media (min-height: 1000px) {
+  .program-overview-container {
+    min-height: 40vh;
+  }
 }
 
 .program-overview-card {
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   height: auto;
-  margin: 2%;
+  margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* program */
+.program-overview-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.program-overview-card img {
+  margin-bottom: 15px;
+}
+
+.program-overview-card h4 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.program-overview-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.program-overview-card button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.program-overview-card button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .program-overview-card {
+    max-width: 90%;
+  }
+
+  .program-overview-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .program-overview-card p {
+    font-size: 0.95rem;
+  }
+
+  .program-overview-card button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-overview-card {
+    max-width: 100%;
+  }
+
+  .program-overview-card h4 {
+    font-size: 1rem;
+  }
+
+  .program-overview-card p {
+    font-size: 0.9rem;
+  }
+
+  .program-overview-card button {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
 
 #programs {
-  min-height: 100vh;
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
+  background-color: #f8f9fa;
+  padding: 100px 0;
 }
 
-.program-title h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 4rem;
-  font-weight: bolder;
-  text-align: center;
-  margin-bottom: 30px;
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
 }
 
-.group-img {
-  border-radius: 10px;
-  height: auto;
-  /* object-fit: cover; */
-  max-width: 100%;
+.text-muted {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
 }
 
-.group-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+.btn-gradient {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.group-title h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #6610f2, #007bff);
+  transform: scale(1.05);
 }
 
-.group-description p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
-  margin: 20px 0;
+.img-fluid {
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.container {
-  margin: auto;
-}
-
-.individual-img {
-  max-width: 100%;
-  border-radius: 10px;
-  height: auto;
-  object-fit: cover;
-}
-
-.individual-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.individual-title h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.individual-description p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
-  margin: 20px 0;
+.img-fluid:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 991px) {
-  .program-overview-card {
-    height: auto;
-    width: 80vw;
-  }
-  .group-details {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 10px;
-    height: auto;
-  }
-
-  .group-description p {
+  .container {
     text-align: center;
   }
 
-  .individual-details {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 10px;
-    height: auto;
+  .row {
+    flex-direction: column-reverse;
   }
 }
 
