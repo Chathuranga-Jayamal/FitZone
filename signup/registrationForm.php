@@ -21,7 +21,7 @@
         <div class="form-container">
             <h1>Registration Form</h1>
             <div class="form-item-container">
-                <form name="registrationForm" class="registration-form" method="post" action="./registration.php" onsubmit="return validate_form();">
+                <form name="registrationForm" class="registration-form" method="post" onsubmit="return validate_form();" action="./registration.php">
                     <div class="form-item">
                         <label for="fname">First Name:</label>
                         <input type="text" id="fname" name="fname" class="input-box">
@@ -29,6 +29,10 @@
                     <div class="form-item">
                         <label for="lname">Last Name:</label>
                         <input type="text" id="lname" name="lname" class="input-box">
+                    </div>
+                    <div class="form-item">
+                        <label for="Username">Username:</label>
+                        <input type="text" id="username" name="username" class="input-box">
                     </div>
                     <div class="form-item">
                         <label for="email">Email:</label>

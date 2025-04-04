@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //check in user table
-    $stmt = $conn->prepare("SELECT UserID, Password FROM User WHERE Email=?");
+    $stmt = $conn->prepare("SELECT * FROM User WHERE Email=?");
     $stmt->bind_param("s", $UserName);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -37,7 +37,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['user_role'] = "customer";
             $_SESSION['user_id'] = $row['UserID'];
-            header("Location: ../membership/membership.php");
+            $_SESSION['user_fname'] = $row['First_Name'];
+            $_SESSION['user_lname'] = $row['Last_Name'];
+            $_SESSION['user_email'] = $row['Email'];
+            $_SESSION['user_phone'] = $row['PhoneNumber'];
+            $_SESSION['user_address'] = $row['Address'];
+            $_SESSION['user_username'] = $row['Username'];
+            header("Location: ../home/home.php");
             exit();
         }
     }

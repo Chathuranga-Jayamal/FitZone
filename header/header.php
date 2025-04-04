@@ -1,6 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <?php
+  session_start();
+  ?>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
@@ -15,11 +20,11 @@
 
 
   </head>
-<body>
 
-<!-- Navigation Bar & Logo-->
-    
-      <nav>
+  <body>
+    <!-- Navigation Bar & Logo-->
+
+    <nav>
 
       <ul class="slidebar">
         <div class="close-button" onclick=hideSlidebar()>
@@ -32,44 +37,39 @@
         <li><a href="../about/about.php">About us</a></li>
 
         <div class="auth-buttons">
-          <button type="button" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
-          <button type="button" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
+          <button type="button" id="login-btn" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" id="signup-btn" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
+          <button type="button " id="account-btn" onclick="window.location.href='../account/account.php';" class="btn btn-primary">Account</button></button>
         </div>
       </ul>
 
-      <ul >
+      <ul>
         <div class="menu-button" onclick=showSlidebar()>
           <i class="material-icons" style="font-size: 36px; color: white;">menu</i>
         </div>
         <li class="logo"><a href="../home/home.php">FitZone</a></li>
-        
+
         <div class="container nav-container">
-        <li class="hideOnMobile menu" ><a href="../home/home.php">Home</a></li>
-        <li class="hideOnMobile menu"><a href="../program/program.php">Program</a></li>
-        <li class="hideOnMobile menu"><a href="../membership/membership.php">Membership</a></li>
-        <li class="hideOnMobile menu"><a href="../blog/blog.php">Blogs</a></li>
-        <li class="hideOnMobile menu"><a href="../about/about.php">About us</a></li>
+          <li class="hideOnMobile menu"><a href="../home/home.php">Home</a></li>
+          <li class="hideOnMobile menu"><a href="../program/program.php">Program</a></li>
+          <li class="hideOnMobile menu"><a href="../membership/membership.php">Membership</a></li>
+          <li class="hideOnMobile menu"><a href="../blog/blog.php">Blogs</a></li>
+          <li class="hideOnMobile menu"><a href="../about/about.php">About us</a></li>
         </div>
 
         <div class="col-md-2 text-end hideOnMobile">
-          <button type="button" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
-          <button type="button" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
+          <?php if (isset($_SESSION['user_id'])): ?>
+            <button type="button" id="profile-btn" onclick="window.location.href='../account/account.php';" class="btn btn-outline-light me-3">
+              <i class="material-icons menu-account-icon">account_circle</i>
+            </button>
+          <?php else: ?>
+            <button type="button" id="login-btn" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
+            <button type="button" id="signup-btn" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
+          <?php endif; ?>
         </div>
       </ul>
-      </nav>
+    </nav>
+    <script src="/FitZone/header/header.js"></script>
+  </body>
 
-      <script>
-        function showSlidebar(){
-          const slidebar = document.querySelector('.slidebar');
-          slidebar.style.display = 'flex'
-        }
-
-        function hideSlidebar(){
-          const slidebar =document.querySelector(".slidebar");
-          slidebar.style.display = 'none';
-        }
-      </script>
-    
-    
-</body>
-</html>
+  </html>
