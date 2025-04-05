@@ -55,6 +55,11 @@
           <li class="hideOnMobile menu"><a href="../membership/membership.php">Membership</a></li>
           <li class="hideOnMobile menu"><a href="../blog/blog.php">Blogs</a></li>
           <li class="hideOnMobile menu"><a href="../about/about.php">About us</a></li>
+          <?php if($_SESSION['user_role']=="Admin"):?>
+          <li class="hideOnMobile menu"><a href="../admin/Dashboard/dashboard.php">Dashboad</a></li>
+          <?php elseif($_SESSION['user_role']=="Manager"):?>
+          <li class="hideOnMobile menu">Dashboard</li>
+          <?php endif; ?>
         </div>
 
         <div class="col-md-2 text-end hideOnMobile">
