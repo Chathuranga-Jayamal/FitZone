@@ -40,7 +40,7 @@ body {
 
 .main-content {
   flex: 1;
-  margin-left: 280px; /* Adjusted to push content to the right */
+  margin-left: 200px;
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;

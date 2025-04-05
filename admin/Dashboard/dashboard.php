@@ -22,7 +22,7 @@
             <div class="action-buttons" style="margin-top: 10px;">
                 <button class="btn btn-outline-primary" onclick="window.location.href='./dashboard.php';">Dashboard</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Employee/employee.php'">Employee</button>
-                <button class="btn btn-outline-primary">User</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../User/user.php';">User</button>
                 <button class="btn btn-outline-primary">Trainer</button>
                 <button class="btn btn-outline-primary">Members</button>
                 <button class="btn btn-outline-primary">Classes</button>
