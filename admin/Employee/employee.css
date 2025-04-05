@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+.admin-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+}
+
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px; /* Adjusted to push content to the right */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bolder;
+  color: #007bff;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.action-buttons .btn {
+  width: 100%;
+}
+
+/* tabel */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* buttons */
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.btn-container .btn {
+  width: 100px;
+}
+
+/* form */
+
+.form-container {
+  margin-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-container {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+#error-message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+#error-message2 {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
