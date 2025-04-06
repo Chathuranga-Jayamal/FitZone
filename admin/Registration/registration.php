@@ -8,7 +8,7 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <!-- CSS -->
-<link rel="stylesheet" href="./user.css">
+<link rel="stylesheet" href="./registration.css">
 <!-- nav-bar -->
 <?php
 include "../../header/header.php";
@@ -35,96 +35,87 @@ include "../../database/connection.php";
         </aside>
         <!-- view account details -->
         <main class="main-content content1 active">
-            <h2 class="page-title">User Management</h2>
+            <h2 class="page-title">Registration Management</h2>
             <div class="view-table-container">
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search for names.." style="margin-bottom: 10px; padding: 6px; width: 200px;">
                 </div>
                 <div class="view-table">
-                    <table id="employeeTable">
+                    <table id="registrationTable">
                         <tr>
+                            <th>RegistrationID</th>
                             <th>UserID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Username</th>
+                            <th>User Email</th>
+                            <th>ClassID</th>
+                            <th>Class Name</th>
                             <th>Status</th>
                         </tr>
 
                         <?php
-                        $sql = "SELECT*FROM User";
+                        $sql = "SELECT r.id, r.UserID, u.Email AS UserEmail, r.ClassID, c.ClassName AS ClassName, r.Status
+            FROM Registration r
+            JOIN User u ON r.UserID = u.UserID
+            JOIN Class c ON r.ClassID = c.ClassID";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>
-                            <td>{$row["UserID"]}</td>
-                            <td>{$row["First_Name"]}</td>
-                            <td>{$row["Last_Name"]}</td>
-                            <td>{$row["Email"]}</td>
-                            <td>{$row["PhoneNumber"]}</td>
-                            <td>{$row["Address"]}</td>
-                            <td>{$row["Username"]}</td>
-                            <td>{$row["Status"]}</td>";
+                <td>{$row["id"]}</td>
+                <td>{$row["UserID"]}</td>
+                <td>{$row["UserEmail"]}</td>
+                <td>{$row["ClassID"]}</td>
+                <td>{$row["ClassName"]}</td>
+                <td>{$row["Status"]}</td>
+            </tr>";
                             }
                         } else {
-                            echo "<tr><td colspan='4'>No records found</td></tr>";
+                            echo "<tr><td colspan='6'>No records found</td></tr>";
                         }
-
                         ?>
                     </table>
                 </div>
-            </div>            
+            </div>
             <div class="form-container activate-form-container">
-                <form name="Activateform" id="Activateform" method="POST" action="./userActivate.php">
+                <form name="form" id="form" method="POST" action="./registrationapproved.php">
                     <div class="form-group">
-                        <label for="id">EmployeeID</label>
-                        <input name="employeeID" type="text" id="idActivate" class="form-control" readonly>
+                        <label for="id">RegistrationID</label>
+                        <input name="id" type="number" id="id" class="form-control" readonly>
                     </div>
                     <div class="form-group">
-                        <label for="firstName">First name</label>
-                        <input type="text" id="firstNameActivate" class="form-control" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lastName">Last name</label>
-                        <input type="text" id="lastNameActivate" class="form-control" readonly>
+                        <label for="userID">UserID</label>
+                        <input type="number" id="userID" class="form-control" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" id="emailActivate" class="form-control" readonly>
+                        <label for="email">User Email</label>
+                        <input type="email" id="email" class="form-control" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id="phoneActivate" class="form-control" readonly>
+                        <label for="classID">ClassID</label>
+                        <input type="number" id="classID" class="form-control" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" id="addressActivate" class="form-control" readonly>
+                        <label for="className">Class Name</label>
+                        <input type="text" id="className" class="form-control" readonly>
                     </div>
-                    <div class="form-group">
-                        <label for="role">Username</label>
-                        <input type="text" id="usernameActivate" class="form-control" readonly>
-                    </div>
+
                     <div class="form-group">
                         <label for="status">Status</label>
-                        <input name="status" type="text" id="statusActivate" class="form-control" readonly>
+                        <input name="status" type="text" id="status" class="form-control" readonly>
                     </div>
                     <div class="action-buttons">
-                        <button type="submit" class="btn btn-primary" onclick="setStatusAndSubmit('Active')">Activate</button>
-                        <button type="submit" class="btn btn-danger" onclick="setStatusAndSubmit('Diactive')">Diactivate</button>
+                        <button type="submit" class="btn btn-primary" onclick="setStatusAndSubmit('approved')">Approved</button>
+                        <button type="submit" class="btn btn-danger" onclick="setStatusAndSubmit('Declined')">Declined</button>
                     </div>
                 </form>
             </div>
         </main>
     </div>
 
-    <script src="./user.js"></script>
+    <script src="./registration.js"></script>
 </body>
 
 </html>
