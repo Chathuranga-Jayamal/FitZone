@@ -8,7 +8,7 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <!-- CSS -->
-<link rel="stylesheet" href="./registration.css">
+<link rel="stylesheet" href="./appointments.css">
 <!-- nav-bar -->
 <?php
 include "../../header/header.php";
@@ -35,39 +35,43 @@ include "../../database/connection.php";
         </aside>
         <!-- view account details -->
         <main class="main-content content1 active">
-            <h2 class="page-title">Registration Management</h2>
+            <h2 class="page-title">Appointments Management</h2>
             <div class="view-table-container">
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search for names.." style="margin-bottom: 10px; padding: 6px; width: 200px;">
                 </div>
                 <div class="view-table">
-                    <table id="registrationTable">
+                    <table id="appointmentTable">
                         <tr>
-                            <th>RegistrationID</th>
+                            <th>AppointmemtID</th>
                             <th>UserID</th>
                             <th>User Email</th>
-                            <th>ClassID</th>
-                            <th>Class Name</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>TrainerID</th>
+                            <th>Trainer Name</th>
                             <th>Status</th>
                         </tr>
 
                         <?php
-                        $sql = "SELECT r.id, r.UserID, u.Email AS UserEmail, r.ClassID, c.ClassName AS ClassName, r.Status
-            FROM Registration r
-            JOIN User u ON r.UserID = u.UserID
-            JOIN Class c ON r.ClassID = c.ClassID";
+                        $sql = "SELECT a.id, a.UserID, u.Email AS UserEmail, a.Title, a.Description, a.TrainerID, t.FirstName AS TrainerName, a.Status
+                        FROM Appointments a
+                        JOIN User u ON a.UserID = u.UserID
+                        JOIN Trainer t ON a.TrainerID = t.TrainerID";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>
-                <td>{$row["id"]}</td>
-                <td>{$row["UserID"]}</td>
-                <td>{$row["UserEmail"]}</td>
-                <td>{$row["ClassID"]}</td>
-                <td>{$row["ClassName"]}</td>
-                <td>{$row["Status"]}</td>
-            </tr>";
+                            <td>{$row["id"]}</td>
+                            <td>{$row["UserID"]}</td>
+                            <td>{$row["UserEmail"]}</td>
+                            <td>{$row["Title"]}</td>
+                            <td>{$row["Description"]}</td>
+                            <td>{$row["TrainerID"]}</td>
+                            <td>{$row["TrainerName"]}</td>
+                            <td>{$row["Status"]}</td>
+                            </tr>";
                             }
                         } else {
                             echo "<tr><td colspan='6'>No records found</td></tr>";
@@ -77,9 +81,9 @@ include "../../database/connection.php";
                 </div>
             </div>
             <div class="form-container activate-form-container">
-                <form name="form" id="form" method="POST" action="./registrationapproved.php">
+                <form name="form" id="form" method="POST" action="./appointmentsApproved.php">
                     <div class="form-group">
-                        <label for="id">RegistrationID</label>
+                        <label for="id">AppoinmentID</label>
                         <input name="id" type="number" id="id" class="form-control" readonly>
                     </div>
                     <div class="form-group">
@@ -93,29 +97,36 @@ include "../../database/connection.php";
                     </div>
 
                     <div class="form-group">
-                        <label for="classID">ClassID</label>
-                        <input type="number" id="classID" class="form-control" readonly>
+                        <label for="classID">Title</label>
+                        <input type="text" id="title" class="form-control" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="className">Class Name</label>
-                        <input type="text" id="className" class="form-control" readonly>
+                        <label for="className">Description</label>
+                        <input type="text" id="description" class="form-control" readonly>
                     </div>
-
+                     <div class="form-group">
+                        <label for="className">TrainerID</label>
+                        <input type="number" id="trainerID" class="form-control" readonly>
+                    </div>
+                     <div class="form-group">
+                        <label for="className">Trainer Name</label>
+                        <input type="text" id="trainerName" class="form-control" readonly>
+                    </div>
                     <div class="form-group">
                         <label for="status">Status</label>
                         <input name="status" type="text" id="status" class="form-control" readonly>
                     </div>
                     <div class="action-buttons">
-                        <button type="submit" class="btn btn-primary" onclick="setStatusAndSubmit('approved')">Approved</button>
+                        <button type="submit" class="btn btn-primary" onclick="setStatusAndSubmit('Approved')">Approved</button>
                         <button type="submit" class="btn btn-danger" onclick="setStatusAndSubmit('Declined')">Declined</button>
                     </div>
-                </form>
-            </div>
+                </form>         
+            </div>                                      
         </main>
     </div>
-
-    <script src="./registration.js"></script>
+    <script src="./appointments.js"></script>
+    
 </body>
 
 </html>
