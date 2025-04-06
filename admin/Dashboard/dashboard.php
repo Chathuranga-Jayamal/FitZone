@@ -28,7 +28,7 @@
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Trainer/trainer.php';">Trainer</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Registration/registration.php';"> Registration</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Appointments/appointments.php'">Appointments</button>
-                <button class="btn btn-outline-primary"> Queries</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Queries/queries.php'"> Queries</button>
                 <button class="btn btn-outline-primary">Promotions</button>
                 <button class="btn btn-outline-primary">Blogs</button>
             </div>

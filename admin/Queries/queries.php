@@ -8,7 +8,7 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <!-- CSS -->
-<link rel="stylesheet" href="./appointments.css">
+<link rel="stylesheet" href="./queries.css">
 <!-- nav-bar -->
 <?php
 include "../../header/header.php";
@@ -35,29 +35,26 @@ include "../../database/connection.php";
         </aside>
         <!-- view account details -->
         <main class="main-content content1 active">
-            <h2 class="page-title">Appointments Management</h2>
+            <h2 class="page-title">Queries Management</h2>
             <div class="view-table-container">
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search for names.." style="margin-bottom: 10px; padding: 6px; width: 200px;">
                 </div>
                 <div class="view-table">
-                    <table id="appointmentTable">
+                    <table id="queryTable">
                         <tr>
-                            <th>AppointmemtID</th>
+                            <th>QueryID</th>
                             <th>UserID</th>
                             <th>User Email</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>TrainerID</th>
-                            <th>Trainer Name</th>
+                            <th>Question</th>
+                            <th>Answer</th>
                             <th>Status</th>
                         </tr>
 
                         <?php
-                        $sql = "SELECT a.id, a.UserID, u.Email AS UserEmail, a.Title, a.Description, a.TrainerID, t.FirstName AS TrainerName, a.Status
-                        FROM Appointments a
-                        JOIN User u ON a.UserID = u.UserID
-                        JOIN Trainer t ON a.TrainerID = t.TrainerID";
+                        $sql = "SELECT  q.id, q.UserID, u.Email AS UserEmail, q.Question, q.Answer, q.Status
+                        FROM Queries q
+                        JOIN User u ON q.UserID = u.UserID";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
@@ -66,10 +63,8 @@ include "../../database/connection.php";
                             <td>{$row["id"]}</td>
                             <td>{$row["UserID"]}</td>
                             <td>{$row["UserEmail"]}</td>
-                            <td>{$row["Title"]}</td>
-                            <td>{$row["Description"]}</td>
-                            <td>{$row["TrainerID"]}</td>
-                            <td>{$row["TrainerName"]}</td>
+                            <td>{$row["Question"]}</td>
+                            <td>{$row["Answer"]}</td>
                             <td>{$row["Status"]}</td>
                             </tr>";
                             }
@@ -81,9 +76,9 @@ include "../../database/connection.php";
                 </div>
             </div>
             <div class="form-container activate-form-container">
-                <form name="form" id="form" method="POST" action="./appointmentsApproved.php">
+                <form name="form" id="form" method="POST" action="./queriesReply.php">
                     <div class="form-group">
-                        <label for="id">AppoinmentID</label>
+                        <label for="id">QueryID</label>
                         <input name="id" type="number" id="id" class="form-control" readonly>
                     </div>
                     <div class="form-group">
@@ -97,35 +92,27 @@ include "../../database/connection.php";
                     </div>
 
                     <div class="form-group">
-                        <label for="classID">Title</label>
-                        <input type="text" id="title" class="form-control" readonly>
+                        <label for="question">Question</label>
+                        <input type="text" id="question" class="form-control" readonly>
                     </div>
 
-                    <div class="form-group">
-                        <label for="className">Description</label>
-                        <input type="text" id="description" class="form-control" readonly>
-                    </div>
                      <div class="form-group">
-                        <label for="className">TrainerID</label>
-                        <input type="number" id="trainerID" class="form-control" readonly>
-                    </div>
-                     <div class="form-group">
-                        <label for="className">Trainer Name</label>
-                        <input type="text" id="trainerName" class="form-control" readonly>
-                    </div>
-                    <div class="form-group">
                         <label for="status">Status</label>
                         <input name="status" type="text" id="status" class="form-control" readonly>
                     </div>
+
+                    <div class="form-group">
+                        <label for="answer">Answer</label>
+                        <input name="answer" type="text" id="answer" class="form-control" required>
+                    </div>
                     <div class="action-buttons">
-                        <button type="submit" class="btn btn-primary" onclick="setStatusAndSubmit('Approved')">Approved</button>
-                        <button type="submit" class="btn btn-danger" onclick="setStatusAndSubmit('Declined')">Declined</button>
+                        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>         
             </div>                                      
         </main>
     </div>
-    <script src="./appointments.js"></script>
+    <script src="./queries.js"></script>
     
 </body>
 
