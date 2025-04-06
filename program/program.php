@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs</title>
     <link rel="stylesheet" href="./program.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
     <section id="introduction">
         <?php include '../header/header.php'; ?>
         <div class="container introduction-container">
-                <h1>Unleash Your Potential and Start Your Fitness Journey Today!</h1>
-                <button class="btn btn-outline-light btn-lg mt-3" onclick="location.href='../membership/membership.php'">Get Membership</button>
+            <h1>Unleash Your Potential and Start Your Fitness Journey Today!</h1>
+            <button class="btn btn-outline-light btn-lg mt-3" onclick="location.href='../membership/membership.php'">Get Membership</button>
         </div>
     </section>
     <section id="programs-overview">
@@ -40,82 +42,78 @@
             </div>
         </div>
     </section>
-   <section id="programs" class="py-5">
-    <div class="container text-center mb-5">
-        <h1 class="display-4 font-weight-bold">Our Programs</h1>
-        <p class="lead text-muted">Discover fitness programs tailored to your needs</p>
-    </div>
+    <section id="programs" class="py-5">
+        <div class="container text-center mb-5">
+            <h1 class="display-4 font-weight-bold text-primary">Our Programs</h1>
+            <p class="lead text-muted">Achieve your fitness goals with expert-designed programs tailored to suit your needs and lifestyle.</p>
+        </div>
 
-    <div class="container mb-5">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <img src="./image/group.jpg" alt="Specialized Fitness Program" class="img-fluid rounded shadow-sm">
-            </div>
-            <div class="col-lg-6">
-                <h2 class="h1 font-weight-bold">Specialized Programs</h2>
-                <p class="text-muted">Our specialized programs cater to weight loss, muscle building, and athletic performance, ensuring expert guidance, customized workouts, and a results-driven approach.</p>
-                <a href="../specialized/specialized.php" class="btn btn-primary btn-lg">Learn More</a>
+        <div class="container mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="./image/group.jpg" alt="Specialized Fitness Program" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h1 font-weight-bold text-dark">Specialized Programs</h2>
+                    <p class="text-muted">Our specialized programs are designed for individuals who want a focused approach to fitness. Whether you're aiming for weight loss, muscle building, or enhanced athletic performance, our expert trainers will provide you with a structured plan. Each program includes detailed workout routines, nutritional advice, and progress tracking to keep you motivated.</p>
+                    <a href="../specialized/specialized.php" class="btn btn-gradient btn-lg mt-3">Learn More</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="row align-items-center flex-column-reverse flex-lg-row">
-            <div class="col-lg-6">
-                <h2 class="h1 font-weight-bold">Personalized Program</h2>
-                <p class="text-muted">Experience one-on-one training with our personalized programs, designed to help you reach your full potential with professional guidance and tailored fitness plans.</p>
-                <a href="../personalized/personalized.php" class="btn btn-primary btn-lg">Learn More</a>
-            </div>
-            <div class="col-lg-6">
-                <img src="./image/individual.jpg" alt="Personalized Training" class="img-fluid rounded shadow-sm">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6">
+                    <h2 class="h1 font-weight-bold text-dark">Personalized Program</h2>
+                    <p class="text-muted">Experience the power of one-on-one training with our personalized programs. Our dedicated trainers will work closely with you to develop a fitness plan tailored to your specific needs, fitness level, and goals. With continuous support, personalized workouts, and real-time adjustments, we ensure you stay on track to reach your full potential.</p>
+                    <a href="../personalized/personalized.php" class="btn btn-gradient btn-lg mt-3">Learn More</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./image/individual.jpg" alt="Personalized Training" class="img-fluid rounded shadow-lg">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <section id="coaches">
         <div class="container coach-main-container">
             <div class="coach-title">
                 <h1>Meet Our Coaches</h1>
             </div>
-            <div class="coach-container mt-0 mb-0">
-                <div class="coach-card card1 order-lg-1 ">
-                    <div class="coach-img-container coach-img-1">
-                        <!-- <img src="../images/photos/Coach1.jpg" alt="coach1" class="coach-img img-fluid"> -->
-                    </div>
-                    <div class="coach-description">
-                        <h4>John Doe</h4>
-                        <p>Head Coach
-                        <p>
-                            <button type="button" class="btn btn-primary">👉 Read More</button>
-                    </div>
-                </div>
-                <div class="coach-card card2 order-lg-2">
-                    <div class="coach-img-container coach-img-2">
-                        <!-- <img src="../images/photos/Coach2.jpg" alt="coach2" class="coach-img img-fluid"> -->
-                    </div>
-                    <div class="coach-description">
-                        <h4>Jane Smith</h4>
-                        <p>Muscle Building Specialist
-                        <p>
-                            <button type="button" class="btn btn-primary">👉 Read More</button>
-                    </div>
-                </div>
-                <div class="coach-card card3 order-lg-3">
-                    <div class="coach-img-container coach-img-3">
-                        <!-- <img src="../images/photos/Coach3.jpg" alt="coach3" class="coach-img img-fluid"> -->
-                    </div>
-                    <div class="coach-description">
-                        <h4>Michael Johnson</h4>
-                        <p>Fat loss Specialist</p>
-                        <button type="button" class="btn btn-primary">👉 Read More</button>
-                    </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <?php
+                    include "../database/connection.php";
+                    $query = "SELECT FirstName, LastName, Role, ImageURL FROM Trainer WHERE Status = 'Active'";
+                    $result = $conn->query($query);
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="swiper-slide">';
+                        echo '  <div class="coach-card">';
+                        echo '    <div class="coach-img-container">';
+                        echo '      <img src="./image/' . htmlspecialchars($row['ImageURL']) . '" alt="' . htmlspecialchars($row['FirstName'] . ' ' . $row['LastName']) . '" class="coach-img img-fluid">';
+                        echo '    </div>';
+                        echo '    <div class="coach-description">';
+                        echo '      <h4>' . htmlspecialchars($row['FirstName'] . ' ' . $row['LastName']) . '</h4>';
+                        echo '      <p>' . htmlspecialchars($row['Role']) . '</p>';
+                        echo '      <button type="button" class="btn btn-primary">👉 Read More</button>';
+                        echo '    </div>';
+                        echo '  </div>';
+                        echo '</div>';
+                    }
+
+                    $conn->close();
+                    ?>
+
                 </div>
 
+                <!-- Swiper Controls -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
-
     </section>
-
     <section id="classes">
         <div class="container class-container">
             <div class="class-logo">
@@ -140,6 +138,40 @@
     </section>
 
     <?php include '../footer/footer.php' ?>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Your custom JS (fix the typo) -->
+    <!-- <script src="./program.js"></script> -->
+
+    <!-- Or include inline -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

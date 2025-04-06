@@ -265,21 +265,20 @@ h2 {
 }
 
 .coach-img-container {
-  min-height: 50vh;
-  /* background-image: url('../images/photos/Coach1.jpg'); */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.coach-img-1 {
-  background-image: url("./image/Coach1.jpg");
-}
-.coach-img-2 {
-  background-image: url("./image/Coach2.jpg");
-}
-.coach-img-3 {
-  background-image: url("./image/Coach3.jpg");
+.coach-img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .coach-description {
@@ -290,6 +289,21 @@ h2 {
   text-align: center;
   width: 100%;
   margin-top: 30px;
+}
+
+.swiper {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 991px) {

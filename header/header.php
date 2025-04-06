@@ -50,13 +50,13 @@
         <li class="logo"><a href="../home/home.php">FitZone</a></li>
 
         <div class="container nav-container">
-          <li class="hideOnMobile menu"><a href="../home/home.php">Home</a></li>
-          <li class="hideOnMobile menu"><a href="../program/program.php">Program</a></li>
-          <li class="hideOnMobile menu"><a href="../membership/membership.php">Membership</a></li>
-          <li class="hideOnMobile menu"><a href="../blog/blog.php">Blogs</a></li>
-          <li class="hideOnMobile menu"><a href="../about/about.php">About us</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/home/home/home.php">Home</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/program/program.php">Program</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/membership/membership.php">Membership</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/blog/blog.php">Blogs</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/about/about.php">About us</a></li>
           <?php if($_SESSION['user_role']=="Admin"):?>
-          <li class="hideOnMobile menu"><a href="../admin/Dashboard/dashboard.php">Dashboad</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/admin/Dashboard/dashboard.php">Dashboad</a></li>
           <?php elseif($_SESSION['user_role']=="Manager"):?>
           <li class="hideOnMobile menu">Dashboard</li>
           <?php endif; ?>
@@ -64,12 +64,12 @@
 
         <div class="col-md-2 text-end hideOnMobile">
           <?php if (isset($_SESSION['user_id'])): ?>
-            <button type="button" id="profile-btn" onclick="window.location.href='../account/account.php';" class="btn btn-outline-light me-3">
+            <button type="button" id="profile-btn" onclick="window.location.href='/FitZone/account/account.php';" class="btn btn-outline-light me-3">
               <i class="material-icons menu-account-icon">account_circle</i>
             </button>
           <?php else: ?>
-            <button type="button" id="login-btn" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" id="signup-btn" onclick="window.location.href='../signup/signup.php';" class="btn btn-primary">Sign-up</button>
+            <button type="button" id="login-btn" onclick="window.location.href='/FitZone/login/login.php';" class="btn btn-outline-primary me-2">Login</button>
+            <button type="button" id="signup-btn" onclick="window.location.href='/FitZone/signup/signup.php';" class="btn btn-primary">Sign-up</button>
           <?php endif; ?>
         </div>
       </ul>

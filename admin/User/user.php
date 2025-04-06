@@ -24,9 +24,8 @@ include "../../database/connection.php";
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Dashboard/dashboard.php';">Dashboard</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Employee/employee.php';">Employee</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../User/user.php';">User</button>
-                <button class="btn btn-outline-primary">Trainer</button>
-                <button class="btn btn-outline-primary">Members</button>
-                <button class="btn btn-outline-primary">Classes</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Classes/class.php';">Classes</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Trainer/trainer.php';">Trainer</button>
                 <button class="btn btn-outline-primary"> Registration</button>
                 <button class="btn btn-outline-primary">Appointments</button>
                 <button class="btn btn-outline-primary"> Queries</button>
