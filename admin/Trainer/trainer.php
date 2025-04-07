@@ -29,7 +29,7 @@ include "../../database/connection.php";
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Registration/registration.php';"> Registration</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Appointments/appointments.php'">Appointments</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Queries/queries.php'"> Queries</button>
-                <button class="btn btn-outline-primary">Promotions</button>
+                <<button class="btn btn-outline-primary" onclick="window.location.href='../Membership/membership.php'">Membership</button>
                 <button class="btn btn-outline-primary">Blogs</button>
             </div>
         </aside>

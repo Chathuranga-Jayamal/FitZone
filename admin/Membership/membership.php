@@ -8,7 +8,7 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <!-- CSS -->
-<link rel="stylesheet" href="./queries.css">
+<link rel="stylesheet" href="./membership.css">
 <!-- nav-bar -->
 <?php
 include "../../header/header.php";
@@ -17,7 +17,7 @@ include "../../database/connection.php";
 </head>
 
 <body>
-    <div class="container admin-container">
+    <div class="admin-container">
         <!-- slide bar -->
         <aside class="admin-sidebar">
             <div class="action-buttons" style="margin-top: 10px;">
@@ -35,85 +35,92 @@ include "../../database/connection.php";
         </aside>
         <!-- view account details -->
         <main class="main-content content1 active">
-            <h2 class="page-title">Queries Management</h2>
+            <h2 class="page-title">Membership Management</h2>
             <div class="view-table-container">
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search for names.." style="margin-bottom: 10px; padding: 6px; width: 200px;">
                 </div>
                 <div class="view-table">
-                    <table id="queryTable">
+                    <table id="membershipTable">
                         <tr>
-                            <th>QueryID</th>
-                            <th>UserID</th>
-                            <th>User Email</th>
-                            <th>Question</th>
-                            <th>Answer</th>
-                            <th>Status</th>
+                            <th>MembershipID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Discount</th>
+                            <th>Percentage</th>
+                            <th>Duration</th>
+                            <th>Description</th>
                         </tr>
 
                         <?php
-                        $sql = "SELECT  q.id, q.UserID, u.Email AS UserEmail, q.Question, q.Answer, q.Status
-                        FROM Queries q
-                        JOIN User u ON q.UserID = u.UserID";
+                        $sql = "SELECT * FROM Membership";
+
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>
-                            <td>{$row["id"]}</td>
-                            <td>{$row["UserID"]}</td>
-                            <td>{$row["UserEmail"]}</td>
-                            <td>{$row["Question"]}</td>
-                            <td>{$row["Answer"]}</td>
-                            <td>{$row["Status"]}</td>
-                            </tr>";
-                            }
+                                <td>{$row["MembershipID"]}</td>
+                                <td>{$row["Name"]}</td>
+                                <td>{$row["Price"]}</td>
+                                <td>{$row["Discount"]}</td>
+                                <td>{$row["Percentage"]}</td>
+                                <td>{$row["Duration"]}</td>
+                                <td>{$row["Description"]}</td>
+                                </tr>";
+                                }
                         } else {
-                            echo "<tr><td colspan='6'>No records found</td></tr>";
+                            echo "<tr><td colspan='15'>No records found</td></tr>";
                         }
                         ?>
                     </table>
+
                 </div>
             </div>
-            <div class="form-container activate-form-container">
-                <form name="form" id="form" method="POST" action="./queriesReply.php">
+            
+            <div class="form-container update-form-container">
+                <form name="updateform" id="updateform" method="POST" action="./membershipUpdate.php" onsubmit="return validate_updateform();">
                     <div class="form-group">
-                        <label for="id">QueryID</label>
-                        <input name="id" type="number" id="id" class="form-control" readonly>
+                        <label for="id">MembershipID</label>
+                        <input name="membershipID" type="number" id="id" class="form-control" readonly>
                     </div>
                     <div class="form-group">
-                        <label for="userID">UserID</label>
-                        <input type="number" id="userID" class="form-control" readonly>
+                        <label for="firstName">Membership name</label>
+                        <input name="name" type="text" id="name" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">User Email</label>
-                        <input type="email" id="email" class="form-control" readonly>
+                        <label for="lastName">Price</label>
+                        <input name="price" type="number" id="price" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label for="question">Question</label>
-                        <input type="text" id="question" class="form-control" readonly>
-                    </div>
-
-                     <div class="form-group">
-                        <label for="status">Status</label>
-                        <input name="status" type="text" id="status" class="form-control" readonly>
+                        <label for="email">Discount</label>
+                        <input name="discount" type="number" id="discount" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label for="answer">Answer</label>
-                        <input name="answer" type="text" id="answer" class="form-control" required>
+                        <label for="phone">Percentage</label>
+                        <input name="percentage" type="text" id="percentage" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label for="role">Duration</label>
+                        <input name="duration" type="text" id="duration" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Description</label>
+                        <input name="description" type="text" id="description" class="form-control">
+                    </div>
+                    <p id="error-message"></p>
                     <div class="action-buttons">
-                        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                        <button name="submit" id="" type="submit" class="btn btn-success">Update</button>
                     </div>
-                </form>         
-            </div>                                      
+                </form>
+            </div>
         </main>
     </div>
-    <script src="./queries.js"></script>
-    
+
+    <script src="./membership.js"></script>
 </body>
 
 </html>
