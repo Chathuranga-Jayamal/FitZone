@@ -50,7 +50,7 @@
                 adapt to your pace and push you toward your goals. Get ready to sweat, challenge yourself, and leave each class
                 feeling stronger and more energized than ever!</p>
             <div class="btn-container">
-                <button class="btn btn-primary btn-lg me-3" onclick="location.href=''">Rgister Now</button>
+                <button class="btn btn-primary btn-lg me-3" onclick="location.href='../registration/registration.php'">Rgister Now</button>
                 <button class="btn btn-outline-primary btn-lg" onclick="location.href='../membership/membership.php'">Get Membership</button>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     breathing, each class is designed to leave you feeling refreshed and rejuvenated. Step onto the mat, take a
                     deep breath, and discover the power of mindful movement!</p>
 
-                <button class="btn btn-outline-primary btn-lg" onclick="location.href=''">Rgister Now</button>
+                <button class="btn btn-outline-primary btn-lg" onclick="location.href='../registration/registration.php'">Rgister Now</button>
             </div>
             <img width="600px" height="auto" src="./image/yoga.jpg" alt="yoga-img">
         </div>
@@ -127,7 +127,7 @@
                 lift, tone, and transform your body. With expert guidance, you'll master resistance exercises, free weights, and
                 bodyweight movements to sculpt a stronger, more confident you. Whether you're a beginner or a pro, it's time to
                 push your limits and unleash your full potential! </p>
-            <button class="btn btn-outline-primary btn-lg" onclick="location.href=''">Register Now</button>
+            <button class="btn btn-outline-primary btn-lg" onclick="location.href='../registration/registration.php'">Register Now</button>
         </div>
 
         <div class="container strength-features-container">

@@ -48,11 +48,12 @@ include "../../database/connection.php";
                             <th>Description</th>
                             <th>Date</th>
                             <th>Capacity</th>
+                            <th>Attendee</th>
                             <th>Trainer</th>
                         </tr>
 
                         <?php
-                        $sql = "SELECT c.ClassID, c.ClassName, c.ClassDescription, c.Date, c.Capacity, t.FirstName AS TrainerName
+                        $sql = "SELECT c.ClassID, c.ClassName, c.ClassDescription, c.Date, c.Capacity, c.Attendee, t.FirstName AS TrainerName
                                 FROM Class c
                                 JOIN Trainer t ON c.TrainerID = t.TrainerID";
 
@@ -66,6 +67,7 @@ include "../../database/connection.php";
                             <td>{$row["ClassDescription"]}</td>
                             <td>{$row["Date"]}</td>
                             <td>{$row["Capacity"]}</td>
+                            <td>{$row["Attendee"]}</td>
                             <td>{$row["TrainerName"]}</td>";
                             }
                         } else {
@@ -87,9 +89,9 @@ include "../../database/connection.php";
                     <div class="form-group">
                         <label for="clasName">Class Name</label>
                         <select name="className" id="className" class="form-control" required>
-                             <option value="cardio">Cardio</option>
-                            <option value="yoga">Yoga</option>
-                            <option value="strength training">Strength Training</option>
+                            <option value="Cardio Class">Cardio Class</option>
+                            <option value="Yoga Class">Yoga Class</option>
+                            <option value="Strength Training">Strength Training Class</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -126,9 +128,9 @@ include "../../database/connection.php";
                     <div class="form-group">
                         <label for="clasName">Class Name</label>
                         <select name="className" id="classNameUpdate" class="form-control" required>
-                            <option value="cardio">Cardio</option>
-                            <option value="yoga">Yoga</option>
-                            <option value="strength training">Strength Training</option>
+                            <option value="Cardio Class">Cardio Class</option>
+                            <option value="Yoga Class">Yoga Class</option>
+                            <option value="Strength Training Class">Strength Training Class</option>
                         </select>
                     </div>
                     <div class="form-group">

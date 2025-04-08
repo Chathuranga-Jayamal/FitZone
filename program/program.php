@@ -132,7 +132,7 @@
             </div>
             <div class="class-buttons">
                 <button type="button" class="btn btn-primary btn-lg me-4" onclick="location.href='../class/class.php'">👉 See More</button>
-                <button type="button" class="btn btn-outline-primary btn-lg">Register Now</button>
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="location.href='../registration/registration.php'">Register Now</button>
             </div>
         </div>
     </section>

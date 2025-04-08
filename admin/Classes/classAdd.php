@@ -16,8 +16,8 @@ if (isset($_POST['submit'])) {
     $trainer = intval($_POST['trainerID']);
 
 
-    $sql = "INSERT INTO Class (ClassName,  ClassDescription, TrainerID, Date , Capacity)
-             VALUES (?,?,?,?,?)";
+    $sql = "INSERT INTO Class (ClassName,  ClassDescription, TrainerID, Date , Capacity, Attendee)
+             VALUES (?,?,?,?,?,0)";
 
     $stml = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stml,"ssisi", $classsName, $description, $trainer,$date, $capacity);
