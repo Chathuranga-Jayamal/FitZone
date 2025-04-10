@@ -50,7 +50,7 @@
         <li class="logo"><a href="../home/home.php">FitZone</a></li>
 
         <div class="container nav-container">
-          <li class="hideOnMobile menu"><a href="/FitZone/home/home/home.php">Home</a></li>
+          <li class="hideOnMobile menu"><a href="/FitZone/home/home.php">Home</a></li>
           <li class="hideOnMobile menu"><a href="/FitZone/program/program.php">Program</a></li>
           <li class="hideOnMobile menu"><a href="/FitZone/membership/membership.php">Membership</a></li>
           <li class="hideOnMobile menu"><a href="/FitZone/blog/blog.php">Blogs</a></li>

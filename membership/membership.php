@@ -10,7 +10,43 @@
 
 <body>
     <section id="introduction">
-        <?php include '../header/header.php' ?>
+        <?php
+        session_start();
+        include '../header/header.php';
+        include '../database/connection.php';
+
+        // silver
+        $sql = 'SELECT * FROM Membership WHERE MembershipID = 1';
+        $result = $conn->query($sql);
+        if($row = $result->fetch_assoc()){
+            $_SESSION['silverPrice'] = $row['Price'];
+            $_SESSION['silverDuration'] = $row['Duration'];
+            $silverDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['silverDiscountPrice'] = $silverDiscountPrice;
+        }
+
+        // gold
+        $sql = 'SELECT * FROM Membership WHERE MembershipID = 2';
+        $result = $conn->query($sql);
+        if($row = $result->fetch_assoc()){
+            $_SESSION['goldPrice'] = $row['Price'];
+            $_SESSION['goldDuration'] = $row['Duration'];
+            $goldDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['goldDiscountPrice'] = $goldDiscountPrice;
+        
+        }
+
+        // platinum
+        $sql = 'SELECT * FROM Membership WHERE MembershipID = 3';   
+        $result = $conn->query($sql);       
+        if($row = $result->fetch_assoc()){
+            $_SESSION['platinumPrice'] = $row['Price'];
+            $_SESSION['platinumDuration'] = $row['Duration'];
+            $goldDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['platinumDiscountPrice'] = $goldDiscountPrice;    
+           
+        }        
+        ?>
         <div class="container introduction-container">
             <div class="introduction-title">
                 <h1>Join With Fitzone</h1>
@@ -42,9 +78,10 @@
                 </div>
                 <div class="card-price">
                     <h4 class="currency">Lks</h4>
-                    <h1 class="price">8,000</h1>
+                    <h1 class="price"><?php echo $_SESSION['silverDiscountPrice'] ?></h1>
                 </div>
-                <p class="per-month">per month</p>
+                <p class="price text-decoration-line-through"><?php echo $_SESSION['silverPrice']?></p>
+                <p class="per-month"><?php echo $_SESSION['silverDuration'] ?></p>
                 <div class="card-description">
                     <ul class="feature-list">
                         <li><span class="material-icons">task_alt</span> Full access to gym equipment & facilities</li>
@@ -65,9 +102,11 @@
                 </div>
                 <div class="card-price">
                     <h4 class="currency">Lks</h4>
-                    <h1 class="price">10,000</h1>
+                    <h1 class="price"><?php echo $_SESSION['goldDiscountPrice'] ?></h1>
+                    
                 </div>
-                <p class="per-month">per month</p>
+                <p class="price text-decoration-line-through"><?php echo $_SESSION['goldPrice']?></p>
+                <p class="per-month"><?php echo $_SESSION['goldDuration']?></p>
                 <div class="card-description">
                     <ul class="feature-list">
                         <li><span class="material-icons">task_alt</span> Everything in Silver Plan +</li>
@@ -86,9 +125,10 @@
                 </div>
                 <div class="card-price">
                     <h4 class="currency">Lks</h4>
-                    <h1 class="price">12,000</h1>
+                    <h1 class="price"><?php echo $_SESSION['platinumDiscountPrice'] ?></h1>
                 </div>
-                <p class="per-month">per month</p>
+                <p class="price text-decoration-line-through"><?php echo $_SESSION['platinumPrice'] ?></p>
+                <p class="per-month"><?php echo $_SESSION['platinumDuration'] ?></p>
                 <div class="card-description">
                     <ul class="feature-list">
                         <li><span class="material-icons">task_alt</span> Everything in Gold Plan +</li>

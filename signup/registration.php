@@ -19,6 +19,8 @@ if(isset($_POST['send'])){
     if($stmt){
         mysqli_stmt_bind_param($stmt, "sssssss", $fname, $lname, $email, $phone, $hashed_password, $address, $UserName);
         if(mysqli_stmt_execute($stmt)){
+            $_SESSION['user_role'] = "customer";
+            $_SESSION['user_id'] = mysqli_insert_id($conn);
             $_SESSION['user_fname'] = $fname;
             $_SESSION['user_lname'] = $lname;
             $_SESSION['user_email'] = $email;

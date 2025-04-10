@@ -143,7 +143,7 @@ session_start();
             <h2 class="page-title">Account Details</h2>
 
             <div id="error-message" class="alert alert-danger"></div>
-            <p id="errorMessage" class="error-message"></p>
+
 
             <form name="accoutEditForm" class="accoutEditForm" method="post" onsubmit="return validate_form();" action="./edit.php">
                 <div class="form-group">

@@ -30,6 +30,12 @@ body {
   align-items: center;
 }
 
+@media (min-height: 1000px) {
+  .form-container {
+    max-width: 1200px;
+  }
+}
+
 /* Form title styling */
 .form-container h1 {
   color: #007bff;
