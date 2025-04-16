@@ -86,7 +86,7 @@ include "../../database/connection.php";
                     </div>
                     <div class="form-group">
                         <label for="firstName">Membership name</label>
-                        <input name="name" type="text" id="name" class="form-control">
+                        <input name="name" type="text" id="name" class="form-control" readonly>
                     </div>
 
                     <div class="form-group">

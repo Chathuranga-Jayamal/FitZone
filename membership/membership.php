@@ -11,6 +11,11 @@
 <body>
     <section id="introduction">
         <?php
+        if (isset($_GET['success'])) {
+            $message = htmlspecialchars($_GET['success'], ENT_QUOTES, 'UTF-8');
+            echo "<script>alert('$message');</script>";
+        }
+
         session_start();
         include '../header/header.php';
         include '../database/connection.php';
@@ -19,6 +24,7 @@
         $sql = 'SELECT * FROM Membership WHERE MembershipID = 1';
         $result = $conn->query($sql);
         if($row = $result->fetch_assoc()){
+            $_SESSION['silverMembership'] = $row['Name'];
             $_SESSION['silverPrice'] = $row['Price'];
             $_SESSION['silverDuration'] = $row['Duration'];
             $silverDiscountPrice = ($row['Price']-$row['Discount']);
@@ -29,6 +35,7 @@
         $sql = 'SELECT * FROM Membership WHERE MembershipID = 2';
         $result = $conn->query($sql);
         if($row = $result->fetch_assoc()){
+            $_SESSION['goldMembership'] = $row['Name'];
             $_SESSION['goldPrice'] = $row['Price'];
             $_SESSION['goldDuration'] = $row['Duration'];
             $goldDiscountPrice = ($row['Price']-$row['Discount']);
@@ -39,6 +46,7 @@
         $sql = 'SELECT * FROM Membership WHERE MembershipID = 3';   
         $result = $conn->query($sql);       
         if($row = $result->fetch_assoc()){
+            $_SESSION['platinumMembership'] = $row['Name'];
             $_SESSION['platinumPrice'] = $row['Price'];
             $_SESSION['platinumDuration'] = $row['Duration'];
             $platinumDiscountPrice = ($row['Price']-$row['Discount']);
@@ -49,6 +57,7 @@
         $sql = 'SELECT * FROM Membership WHERE MembershipID = 4';   
         $result = $conn->query($sql);       
         if($row = $result->fetch_assoc()){
+            $_SESSION['weightlossMembership'] = $row['Name'];
             $_SESSION['weightlossPrice'] = $row['Price'];
             $_SESSION['weightlossDuration'] = $row['Duration'];
             $weightlossDiscountPrice = ($row['Price']-$row['Discount']);
@@ -59,6 +68,7 @@
         $sql = 'SELECT * FROM Membership WHERE MembershipID = 5';   
         $result = $conn->query($sql);       
         if($row = $result->fetch_assoc()){
+            $_SESSION['muscleMembership'] = $row['Name'];
             $_SESSION['musclePrice'] = $row['Price'];
             $_SESSION['muscleDuration'] = $row['Duration'];
             $muscleDiscountPrice = ($row['Price']-$row['Discount']);
@@ -69,6 +79,7 @@
         $sql = 'SELECT * FROM Membership WHERE MembershipID = 6';   
         $result = $conn->query($sql);       
         if($row = $result->fetch_assoc()){
+            $_SESSION['athleticMembership'] = $row['Name'];
             $_SESSION['athleticPrice'] = $row['Price'];
             $_SESSION['athleticDuration'] = $row['Duration'];
             $athleticDiscountPrice = ($row['Price']-$row['Discount']);
@@ -119,7 +130,7 @@
                     </ul>
                 </div>
                 <div class="card-button">
-                    <button class="btn btn-outline-primary">Get Started</button>
+                    <button class="btn btn-outline-primary" onclick="location.href='./pay.php?membershipID=1'">Get Started</button>
                 </div>
             </div>
 
@@ -144,7 +155,7 @@
                     </ul>
                 </div>
                 <div class="card-button">
-                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-primary" onclick="location.href='./pay.php?membershipID=2'">Get Started</button>
                 </div>
             </div>
             <div class="platinum-card card">
@@ -166,7 +177,7 @@
                     </ul>
                 </div>
                 <div class="card-button">
-                    <button class="btn btn-outline-primary">Get Started</button>
+                    <button class="btn btn-outline-primary" onclick="location.href='./pay.php?membershipID=3'">Get Started</button>
                 </div>
             </div>
         </div>
@@ -283,7 +294,7 @@
                     </ul>
                 </div>
                 <div class="card-button">
-                    <button class="btn btn-outline-primary">Get Started</button>
+                    <button class="btn btn-outline-primary" onclick="location.href='./pay.php?membershipID=4'">Get Started</button>
                 </div>
             </div>
 
@@ -306,7 +317,7 @@
                     </ul>
                 </div>
                 <div class="card-button">
-                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-primary" onclick="location.href='./pay.php?membershipID=5'">Get Started</button>
                 </div>
             </div>
             <div class="athletic-card card">
@@ -327,7 +338,7 @@
                     </ul>
                 </div>
                 <div class="card-button">
-                    <button class="btn btn-outline-primary">Get Started</button>
+                    <button class="btn btn-outline-primary" onclick="location.href='./pay.php?membershipID=6'">Get Started</button>
                 </div>
             </div>
         </div>

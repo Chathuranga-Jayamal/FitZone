@@ -1,0 +1,123 @@
+/* Main body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Form container styling */
+.form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+@media (min-height: 1000px) {
+  .form-container {
+    max-width: 1200px;
+  }
+}
+
+/* Form title styling */
+.form-container h1 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+/* Form fields styling */
+.form-item-container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+}
+
+.form-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form-item label {
+  width: 100px;
+  font-weight: 500;
+}
+
+.input-box {
+  width: 50vw;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out;
+}
+
+@media (min-height: 1000px) {
+  .input-box {
+    width: 35vw;
+  }
+}
+
+.input-box:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button container */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .form-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-item label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 0px;
+  text-align: center;
+}
