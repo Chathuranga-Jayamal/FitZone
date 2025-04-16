@@ -33,7 +33,6 @@
             $_SESSION['goldDuration'] = $row['Duration'];
             $goldDiscountPrice = ($row['Price']-$row['Discount']);
             $_SESSION['goldDiscountPrice'] = $goldDiscountPrice;
-        
         }
 
         // platinum
@@ -42,10 +41,39 @@
         if($row = $result->fetch_assoc()){
             $_SESSION['platinumPrice'] = $row['Price'];
             $_SESSION['platinumDuration'] = $row['Duration'];
-            $goldDiscountPrice = ($row['Price']-$row['Discount']);
-            $_SESSION['platinumDiscountPrice'] = $goldDiscountPrice;    
-           
-        }        
+            $platinumDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['platinumDiscountPrice'] = $platinumDiscountPrice;      
+        }
+
+        // weight loss
+        $sql = 'SELECT * FROM Membership WHERE MembershipID = 4';   
+        $result = $conn->query($sql);       
+        if($row = $result->fetch_assoc()){
+            $_SESSION['weightlossPrice'] = $row['Price'];
+            $_SESSION['weightlossDuration'] = $row['Duration'];
+            $weightlossDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['weightlossDiscountPrice'] = $weightlossDiscountPrice;    
+        } 
+
+        // muscle building
+        $sql = 'SELECT * FROM Membership WHERE MembershipID = 5';   
+        $result = $conn->query($sql);       
+        if($row = $result->fetch_assoc()){
+            $_SESSION['musclePrice'] = $row['Price'];
+            $_SESSION['muscleDuration'] = $row['Duration'];
+            $muscleDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['muscleDiscountPrice'] = $muscleDiscountPrice;    
+        } 
+
+        // athletic training
+        $sql = 'SELECT * FROM Membership WHERE MembershipID = 6';   
+        $result = $conn->query($sql);       
+        if($row = $result->fetch_assoc()){
+            $_SESSION['athleticPrice'] = $row['Price'];
+            $_SESSION['athleticDuration'] = $row['Duration'];
+            $athleticDiscountPrice = ($row['Price']-$row['Discount']);
+            $_SESSION['athleticDiscountPrice'] = $athleticDiscountPrice;    
+        } 
         ?>
         <div class="container introduction-container">
             <div class="introduction-title">
@@ -243,9 +271,10 @@
                 </div>
                 <div class="card-price">
                     <h4 class="currency">Lks</h4>
-                    <h1 class="price">10,000</h1>
+                    <h1 class="price"><?php echo $_SESSION['weightlossDiscountPrice'] ?></h1>
                 </div>
-                <p class="per-month">per month</p>
+                <p class="price text-decoration-line-through"><?php echo $_SESSION['weightlossPrice'] ?></p>
+                <p class="per-month"><?php echo $_SESSION['weightlossDuration'] ?></p>
                 <div class="card-description">
                     <ul class="feature-list">
                         <li><span class="material-icons">task_alt</span> Customized fat-burning workout plans</li>
@@ -265,9 +294,10 @@
                 </div>
                 <div class="card-price">
                     <h4 class="currency">Lks</h4>
-                    <h1 class="price">15,000</h1>
+                    <h1 class="price"><?php echo $_SESSION['muscleDiscountPrice'] ?></h1>
                 </div>
-                <p class="per-month">per month</p>
+                <p class="price text-decoration-line-through"><?php echo $_SESSION['musclePrice'] ?></p>
+                <p class="per-month"><?php echo $_SESSION['muscleDuration'] ?></p>
                 <div class="card-description">
                     <ul class="feature-list">
                         <li><span class="material-icons">task_alt</span> Strength-focused training programs</li>
@@ -285,9 +315,10 @@
                 </div>
                 <div class="card-price">
                     <h4 class="currency">Lks</h4>
-                    <h1 class="price">20,000</h1>
+                    <h1 class="price"><?php echo $_SESSION['athleticDiscountPrice'] ?></h1>
                 </div>
-                <p class="per-month">per month</p>
+                <p class="price text-decoration-line-through"><?php echo $_SESSION['athleticPrice'] ?></p>
+                <p class="per-month"><?php echo $_SESSION['athleticDuration'] ?></p>
                 <div class="card-description">
                     <ul class="feature-list">
                         <li><span class="material-icons">task_alt</span> Sport-specific training plans & guidance</li>
