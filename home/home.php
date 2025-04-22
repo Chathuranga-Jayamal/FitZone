@@ -126,9 +126,9 @@
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <?php
+                      <?php
                     include "../database/connection.php";
-                    $query = "SELECT FirstName, LastName, Role, ImageURL FROM Trainer WHERE Status = 'Active'";
+                    $query = "SELECT TrainerID, FirstName, LastName, Role, ImageURL FROM Trainer WHERE Status = 'Active'";
                     $result = $conn->query($query);
 
                     while ($row = $result->fetch_assoc()) {
@@ -140,7 +140,7 @@
                         echo '    <div class="coach-description">';
                         echo '      <h4>' . htmlspecialchars($row['FirstName'] . ' ' . $row['LastName']) . '</h4>';
                         echo '      <p>' . htmlspecialchars($row['Role']) . '</p>';
-                        echo '      <button type="button" class="btn btn-primary">👉 Read More</button>';
+                        echo '      <button type="button" class="btn btn-primary" onclick="location.href=\'../Trainer/Trainer.php?id=' . htmlspecialchars($row['TrainerID']) . '\'">👉 Read More</button>';
                         echo '    </div>';
                         echo '  </div>';
                         echo '</div>';

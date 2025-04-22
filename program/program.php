@@ -84,7 +84,7 @@
                 <div class="swiper-wrapper">
                     <?php
                     include "../database/connection.php";
-                    $query = "SELECT FirstName, LastName, Role, ImageURL FROM Trainer WHERE Status = 'Active'";
+                    $query = "SELECT TrainerID, FirstName, LastName, Role, ImageURL FROM Trainer WHERE Status = 'Active'";
                     $result = $conn->query($query);
 
                     while ($row = $result->fetch_assoc()) {
@@ -96,7 +96,7 @@
                         echo '    <div class="coach-description">';
                         echo '      <h4>' . htmlspecialchars($row['FirstName'] . ' ' . $row['LastName']) . '</h4>';
                         echo '      <p>' . htmlspecialchars($row['Role']) . '</p>';
-                        echo '      <button type="button" class="btn btn-primary">👉 Read More</button>';
+                        echo '      <button type="button" class="btn btn-primary" onclick="location.href=\'../Trainer/Trainer.php?id=' . htmlspecialchars($row['TrainerID']) . '\'">👉 Read More</button>';
                         echo '    </div>';
                         echo '  </div>';
                         echo '</div>';
@@ -104,6 +104,7 @@
 
                     $conn->close();
                     ?>
+
 
                 </div>
 
@@ -140,11 +141,6 @@
     <?php include '../footer/footer.php' ?>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Your custom JS (fix the typo) -->
-    <!-- <script src="./program.js"></script> -->
-
-    <!-- Or include inline -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const swiper = new Swiper(".mySwiper", {

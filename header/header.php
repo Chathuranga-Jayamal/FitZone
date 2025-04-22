@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Google Icons -->
@@ -30,11 +31,11 @@
         <div class="close-button" onclick=hideSlidebar()>
           <i class="material-icons" style="color: white;">close</i>
         </div>
-        <li><a href="../home/home.php">Home</a></li>
-        <li><a href="../program/program.php">Program</a></li>
-        <li><a href="../membership/membership.php">Membership</a></li>
-        <li><a href="../blog/blog.php">Blogs</a></li>
-        <li><a href="../about/about.php">About us</a></li>
+        <li><a href="/FitZone/home/home.php">Home</a></li>
+        <li><a href="/FitZone/program/program.php">Program</a></li>
+        <li><a href="/FitZone/membership/membership.php">Membership</a></li>
+        <li><a href="/FitZone/blog/blog.php">Blogs</a></li>
+        
 
         <div class="auth-buttons">
           <button type="button" id="login-btn" onclick="window.location.href='../login/login.php';" class="btn btn-outline-primary me-2">Login</button>
@@ -54,7 +55,6 @@
           <li class="hideOnMobile menu"><a href="/FitZone/program/program.php">Program</a></li>
           <li class="hideOnMobile menu"><a href="/FitZone/membership/membership.php">Membership</a></li>
           <li class="hideOnMobile menu"><a href="/FitZone/blog/blog.php">Blogs</a></li>
-          <li class="hideOnMobile menu"><a href="/FitZone/about/about.php">About us</a></li>
           <?php if($_SESSION['user_role']=="Admin"):?>
           <li class="hideOnMobile menu"><a href="/FitZone/admin/Dashboard/dashboard.php">Dashboad</a></li>
           <?php elseif($_SESSION['user_role']=="Manager"):?>

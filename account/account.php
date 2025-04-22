@@ -41,7 +41,7 @@ session_start();
     }
 
 
-
+    $userRole = $_SESSION['user_role'] ? $_SESSION['user_role'] : '';
     $fname = $_SESSION['user_fname'] ? $_SESSION['user_fname'] : '';
     $lname = $_SESSION['user_lname'] ? $_SESSION['user_lname'] : '';
     $username = $_SESSION['user_username'] ? $_SESSION['user_username'] : '';
@@ -62,34 +62,29 @@ session_start();
 
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="../account/account.php" class="nav-link active">
-                            <span class="icon"><i class="material-icons">account_circle</i></span>My Account</a>
+                        <a href="../account/account.php" class="nav-link active">My Account</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../home/home.php" class="nav-link">
-                            <span class="icon"><i class="material-icons">home</i></span> Home
-                        </a>
+                        <a href="../home/home.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../program/program.php" class="nav-link">
-                            <span class="icon"><i class="material-icons">dialpad</i></span> Program
-                        </a>
+                        <a href="../program/program.php" class="nav-link">Program</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../membership/membership.php" class="nav-link">
-                            <span class="icon"><i class="material-icons">loyalty</i></span> Membership
-                        </a>
+                        <a href="../membership/membership.php" class="nav-link">Membership</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../blog/blog.php" class="nav-link">
-                            <span class="icon"><i class="material-icons">view_cozy</i></span> Blogs
-                        </a>
+                        <a href="../blog/blog.php" class="nav-link">Blogs</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="../about/about.php" class="nav-link">
-                            <span class="icon"><i class="material-icons">favorite</i></span> About Us
-                        </a>
-                    </li>
+                    <?php if ($_SESSION['user_role'] == "customer"): ?>
+                         <li class="nav-item">
+                            <a href="./query.php" class="nav-link">Query</a>
+                        </li>
+                    <?php elseif ($_SESSION['user_role'] == "trainer"): ?>
+                        <li class="nav-item">
+                            <a href="./viewAppointment.php" class="nav-link">View Appointment</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
 

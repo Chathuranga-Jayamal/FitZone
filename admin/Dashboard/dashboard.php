@@ -30,7 +30,7 @@
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Appointments/appointments.php'">Appointments</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Queries/queries.php'"> Queries</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Membership/membership.php'">Membership</button>
-                <button class="btn btn-outline-primary">Blogs</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../blog/blog.php'">Blogs</button>
             </div>
         </aside>
         <!-- view account details -->
@@ -172,8 +172,20 @@
                         ?>
                     </div>
                     <div class="dashboard-item">
-                        <h4>Number of Blogs</h4>
-                        <h1>5</h1>
+                        <?php
+                        include '../../database/connection.php';
+                        $sql = 'SELECT COUNT(id) AS count FROM blogs';
+                        $result = $conn->query($sql);
+
+                        if ($result) {
+                            $row = $result->fetch_assoc();
+                            $blogsCount = $row['count'];
+                            echo "<h4>Number of Blogs</h3>
+                            <h1>$blogsCount</h1>";
+                        } else {
+                            echo "<h3>Error fetching data</h3>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
