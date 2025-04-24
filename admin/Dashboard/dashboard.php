@@ -21,7 +21,8 @@
         <!-- slide bar -->
         <aside class="admin-sidebar">
             <div class="action-buttons" style="margin-top: 10px;">
-                <button class="btn btn-outline-primary" onclick="window.location.href='./dashboard.php';">Dashboard</button>
+               <?php if ($_SESSION['user_role'] == "Admin") : ?>
+                     <button class="btn btn-outline-primary" onclick="window.location.href='../Dashboard/dashboard.php';">Dashboard</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Employee/employee.php'">Employee</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../User/user.php';">User</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Classes/class.php';">Classes</button>
@@ -31,6 +32,17 @@
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Queries/queries.php'"> Queries</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../Membership/membership.php'">Membership</button>
                 <button class="btn btn-outline-primary" onclick="window.location.href='../blog/blog.php'">Blogs</button>
+                <?php elseif ($_SESSION['user_role'] == "Manager") : ?>
+                    <button class="btn btn-outline-primary" onclick="window.location.href='../Dashboard/dashboard.php';">Dashboard</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../User/user.php';">User</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Classes/class.php';">Classes</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Trainer/trainer.php';">Trainer</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Registration/registration.php';"> Registration</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Appointments/appointments.php'">Appointments</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Queries/queries.php'"> Queries</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../Membership/membership.php'">Membership</button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='../blog/blog.php'">Blogs</button>
+                <?php endif; ?>
             </div>
         </aside>
         <!-- view account details -->

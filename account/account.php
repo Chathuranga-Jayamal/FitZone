@@ -80,7 +80,7 @@ session_start();
                          <li class="nav-item">
                             <a href="./query.php" class="nav-link">Query</a>
                         </li>
-                    <?php elseif ($_SESSION['user_role'] == "trainer"): ?>
+                    <?php elseif ($_SESSION['user_role'] == "Trainer"): ?>
                         <li class="nav-item">
                             <a href="./viewAppointment.php" class="nav-link">View Appointment</a>
                         </li>

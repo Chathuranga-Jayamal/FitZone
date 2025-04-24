@@ -58,7 +58,7 @@
           <?php if($_SESSION['user_role']=="Admin"):?>
           <li class="hideOnMobile menu"><a href="/FitZone/admin/Dashboard/dashboard.php">Dashboad</a></li>
           <?php elseif($_SESSION['user_role']=="Manager"):?>
-          <li class="hideOnMobile menu">Dashboard</li>
+          <li class="hideOnMobile menu"><a href="/FitZone/admin/Dashboard/dashboard.php">Dashboad</a></li>
           <?php endif; ?>
         </div>
 

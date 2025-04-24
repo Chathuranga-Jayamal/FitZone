@@ -20,14 +20,15 @@ if (isset($_POST['submit'])) {
     $years = $_POST['experience'];
     $specialites = mysqli_real_escape_string($conn, $_POST['specialties']);
     $status = "new";
+    $UserRole = "Trainer";
 
     // Insert query
     $sql = "INSERT INTO Trainer (
-                FirstName, LastName, Email, Phone, Role, Bio, ImageURL, CertificationID, ExperienceYears, Specialties, Status, Password 
+                FirstName, LastName, Email, Phone, Role, Bio, ImageURL, CertificationID, ExperienceYears, Specialties, Status, Password, UserRole 
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)";
 
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "sssssssiisss", $firstName, $lastName, $email, $phone, $role, $bio, $image, $certificationID,$years,$specialites, $status, $password);
+    mysqli_stmt_bind_param($stmt, "sssssssiisss", $firstName, $lastName, $email, $phone, $role, $bio, $image, $certificationID,$years,$specialites, $status, $password, $UserRole);
 
     if (mysqli_stmt_execute($stmt)) {
         header("Location: ./trainer.php");
