@@ -16,7 +16,17 @@
 
 <body>
     <!-- nav-bar -->
-    <?php include "../../header/header.php" ?>
+    <?php 
+    session_start();
+    if (!isset($_SESSION['user_id'])) {
+    session_destroy();
+    header("Location: /FitZone/login/login.php");
+    exit();
+    }
+
+    include "../../header/header.php" 
+    ?>
+
     <div class="container admin-container">
         <!-- slide bar -->
         <aside class="admin-sidebar">

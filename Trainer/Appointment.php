@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (!isset($_SESSION['user_id'])) {
+    session_destroy();
+    header("Location: ../login/login.php");
+    exit();
+}
+
 include "../header/header.php";
 include "../database/connection.php";
 
@@ -114,4 +120,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </body>
 </html>
-cl

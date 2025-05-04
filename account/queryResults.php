@@ -73,16 +73,17 @@
 <body>
 
     <?php
+    if (!isset($_SESSION['user_id'])) {
+    session_destroy();
+    header("Location: ../login/login.php");
+    exit();
+    }
+
     include "../header/header.php"; // Your navbar
     include "../database/connection.php";
     session_start();
 
     $userID = $_SESSION['user_id'] ?? null;
-
-    if (!$userID) {
-        echo "<div class='container'><p class='no-results'>You must be logged in to view your answered queries.</p></div>";
-        exit;
-    }
 
     $query = "SELECT Question, Answer, Qdate, Adate FROM Queries 
               WHERE UserID = ? AND Answer IS NOT NULL";

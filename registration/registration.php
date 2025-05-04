@@ -18,7 +18,9 @@
         $user_lname = $_SESSION['user_lname'] ? $_SESSION['user_lname'] : '';
         $user_username = $_SESSION['user_username'] ? $_SESSION['user_username'] : '';
     } else {
-        echo 'Session Error';
+        session_destroy();
+        header("Location: /FitZone/login/login.php");
+        exit();
     }
     include "../header/header.php";
     $error_message = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
