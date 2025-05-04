@@ -52,3 +52,11 @@ function displayError(message, inputField) {
   inputField.focus();
   return false;
 }
+
+function cancelForm() {
+  // Reset form fields
+  document.loginForm.reset();
+
+  // Clear the error message
+  document.getElementById("error-message").innerText = "";
+}

@@ -27,7 +27,7 @@
 
                 <div class="btn-container">
                     <button class="submitbtn btn btn-primary" type="submit">Login</button>
-                    <button class="resetbtn btn btn-outline-primary" type="reset">Cancel</button>
+                    <button class="resetbtn btn btn-outline-primary" type="reset" onclick="cancelForm()">Cancel</button>
                 </div>
             </form>
         </div>

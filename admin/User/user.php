@@ -92,7 +92,7 @@ include "../../database/connection.php";
             <div class="form-container activate-form-container">
                 <form name="Activateform" id="Activateform" method="POST" action="./userActivate.php">
                     <div class="form-group">
-                        <label for="id">EmployeeID</label>
+                        <label for="id">UserID</label>
                         <input name="employeeID" type="text" id="idActivate" class="form-control" readonly>
                     </div>
                     <div class="form-group">

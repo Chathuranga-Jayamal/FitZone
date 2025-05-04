@@ -55,17 +55,20 @@
                     <div class="feature">
                         <i class="material-icons">fitness_center</i>
                         <h4>Personalized Workout Plans</h4>
-                        <p>Tailored exercise routines designed to maximize fat burning while preserving muscle, ensuring sustainable weight loss.</p>
+                        <p>Tailored exercise routines designed to maximize fat 
+                            burning while preserving muscle, ensuring sustainable weight loss.</p>
                     </div>
                     <div class="feature">
                         <i class="material-icons">local_dining</i>
                         <h4>Expert Nutrition Guidance</h4>
-                        <p>Customized meal plans and nutritional advice to fuel your body efficiently and promote healthy weight loss.</p>
+                        <p>Customized meal plans and nutritional advice to 
+                            fuel your body efficiently and promote healthy weight loss.</p>
                     </div>
                     <div class="feature">
                         <i class="material-icons">widgets</i>
                         <h4>Exclusive Member Perks</h4>
-                        <p>JGain access to special discounts on supplements, fitness gear, and exclusive member-only workout sessions or classes.</p>
+                        <p>JGain access to special discounts on supplements, fitness gear, 
+                            and exclusive member-only workout sessions or classes.</p>
                     </div>
                 </div>
                 <div class="feature-row gap-3">

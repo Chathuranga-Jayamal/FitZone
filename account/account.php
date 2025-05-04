@@ -78,7 +78,10 @@ session_start();
                     </li>
                     <?php if ($_SESSION['user_role'] == "customer"): ?>
                          <li class="nav-item">
-                            <a href="./query.php" class="nav-link">Query</a>
+                            <a href="./query.php" class="nav-link">Send Query</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./queryResults.php" class="nav-link">Query Results</a>
                         </li>
                     <?php elseif ($_SESSION['user_role'] == "Trainer"): ?>
                         <li class="nav-item">

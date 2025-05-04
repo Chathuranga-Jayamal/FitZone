@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
     if ($stmt) {
         mysqli_stmt_bind_param(
             $stmt,
-            "sssssssisssi",
+            "sssssssiisi",
             $firstName,
             $lastName,
             $email,

@@ -50,3 +50,11 @@ function displayError(message, field) {
   // Focus on the correct field
   document.signupForm[field].focus();
 }
+
+function cancelForm() {
+  // Reset form fields
+  document.loginForm.reset();
+
+  // Clear the error message
+  document.getElementById("error-message").innerText = "";
+}

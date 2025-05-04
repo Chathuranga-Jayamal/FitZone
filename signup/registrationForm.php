@@ -21,7 +21,8 @@
         <div class="form-container">
             <h1>Registration Form</h1>
             <div class="form-item-container">
-                <form name="registrationForm" class="registration-form" method="post" onsubmit="return validate_form();" action="./registration.php">
+                <form name="registrationForm" class="registration-form" method="post" 
+                onsubmit="return validate_form();" action="./registration.php">
                     <div class="form-item">
                         <label for="fname">First Name:</label>
                         <input type="text" id="fname" name="fname" class="input-box">
@@ -36,7 +37,8 @@
                     </div>
                     <div class="form-item">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email)?>" class="input-box">
+                        <input type="email" id="email" name="email" 
+                        value="<?php echo htmlspecialchars($email)?>" class="input-box" readonly>
                     </div>
                     <div class="form-item">
                         <label for="phone">Phone No:</label>
@@ -48,13 +50,14 @@
                     </div>
                     <div class="form-item">
                         <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($password)?>" class="input-box">
+                        <input type="password" id="password" name="password" 
+                        value="<?php echo htmlspecialchars($password)?>" class="input-box" readonly>
                     </div>
                     <!-- error-message -->
                     <p id="error-message" class="error-message"><?php echo $error_message; ?></p>
                     <div class="button-group">
                         <button name="send" class="btn btn-primary btn-lg me-5" type="submit">Sign Up</button>
-                        <button name="cancel" class="btn btn-outline-primary btn-lg" type="reset">Cancel</button>
+                        <button name="cancel" class="btn btn-outline-primary btn-lg" type="reset" onclick="cancelForm()">Cancel</button>
                     </div>
                 </form>
             </div>

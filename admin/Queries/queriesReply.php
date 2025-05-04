@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 include("../../database/connection.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $id = intval($_POST['id']);
+if (isset($_POST['submit'])) {
+    $id = ($_POST['id']);
     $status = $_POST['status'];
     $newstatus = "Replyed";
     $answer = $_POST['answer'];
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ssi", $answer,$newstatus, $id);
 
-    if ($status === "pending") {
+    if ($status === "Pending") {
         if (mysqli_stmt_execute($stmt)) {
         header("Location: ./queries.php");
         exit();
@@ -27,5 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: ./queries.php?error=Already Replyed");
         exit();
     }
+}else {
+    header("Location: ./queries.php?error=Invalid Request");
+    exit();
 }
 ?>

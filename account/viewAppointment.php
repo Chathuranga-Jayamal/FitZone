@@ -28,7 +28,7 @@ $result = $stmt->get_result();
     body {
         font-family: 'Segoe UI', sans-serif;
         background-color: #f2f6fa;
-        
+    }
 
     h1 {
         text-align: center;

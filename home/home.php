@@ -18,7 +18,12 @@
         <div class="container hero-content">
             <h3>FitZone Fitness Center</h3>
             <h1>Where Fitness<br>Become Your<br>Lifestyle</h1>
-            <button class="btn btn-outline-light btn-lg" onclick="window.location.href='../signup/signup.php';">Sign-up</button>
+            <?php
+            if (!isset($_SESSION['user_id'])) {
+                echo '<button class="btn btn-outline-light btn-lg" onclick="window.location.href=\'../signup/signup.php\';">Sign-up</button>';
+            }
+            ?>
+
         </div>
     </section>
 
@@ -126,7 +131,7 @@
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                      <?php
+                    <?php
                     include "../database/connection.php";
                     $query = "SELECT TrainerID, FirstName, LastName, Role, ImageURL FROM Trainer WHERE Status = 'Active'";
                     $result = $conn->query($query);
@@ -160,27 +165,27 @@
     </section>
 
     <!-- reviews -->
-   <section id="reviews">
-     <div class="container testimonials-container">
-        <div class="testimonial-card">
-            <h2 class="customer-name">Priya Fernando</h2>
-            <div class="star-rating">⭐⭐⭐⭐⭐</div>
-            <p class="testimonial-text">"FitZone has been a game-changer for me! The personalized training helped me shed 10 kilos in just three months, and the trainers are so motivating. The gym's vibe is unbeatable - clean, modern, and full of energy. Highly recommend!"</p>
-        </div>
+    <section id="reviews">
+        <div class="container testimonials-container">
+            <div class="testimonial-card">
+                <h2 class="customer-name">Priya Fernando</h2>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"FitZone has been a game-changer for me! The personalized training helped me shed 10 kilos in just three months, and the trainers are so motivating. The gym's vibe is unbeatable - clean, modern, and full of energy. Highly recommend!"</p>
+            </div>
 
-        <div class="testimonial-card">
-            <h2 class="customer-name">Nimal Perera</h2>
-            <div class="star-rating">⭐⭐⭐⭐⭐</div>
-            <p class="testimonial-text">"I joined for the strength training classes, and wow, I've never felt stronger! The equipment is top-notch, and the staff really know their stuff. FitZone makes every workout fun and worth it - 5 stars from me!"</p>
-        </div>
+            <div class="testimonial-card">
+                <h2 class="customer-name">Nimal Perera</h2>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"I joined for the strength training classes, and wow, I've never felt stronger! The equipment is top-notch, and the staff really know their stuff. FitZone makes every workout fun and worth it - 5 stars from me!"</p>
+            </div>
 
-        <div class="testimonial-card">
-            <h2 class="customer-name">Ayesha Silva</h2>
-            <div class="star-rating">⭐⭐⭐⭐⭐</div>
-            <p class="testimonial-text">"The yoga classes at FitZone are my happy place! The instructors are amazing, and I love how they cater to all levels. Plus, the specialized muscle-building program I started is already showing results. Best gym in Kurunegala!"</p>
+            <div class="testimonial-card">
+                <h2 class="customer-name">Ayesha Silva</h2>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The yoga classes at FitZone are my happy place! The instructors are amazing, and I love how they cater to all levels. Plus, the specialized muscle-building program I started is already showing results. Best gym in Kurunegala!"</p>
+            </div>
         </div>
-    </div>
-   </section>
+    </section>
 
     <!-- FAQ Section -->
     <section id="faq">
@@ -189,23 +194,23 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <h4>What membership options does FitZone offer?</h4>
-                    <p>We provide a range of plans to suit your needs – from basic access to premium packages that include personalized 
+                    <p>We provide a range of plans to suit your needs – from basic access to premium packages that include personalized
                         training and nutrition counseling. Check out our Membership page for pricing and details!</p>
                 </div>
                 <div class="faq-item">
                     <h4>Are the trainers certified?</h4>
-                    <p>Absolutely! All our trainers are fully certified, with expertise in areas like weight loss, muscle building, and athletic performance, 
+                    <p>Absolutely! All our trainers are fully certified, with expertise in areas like weight loss, muscle building, and athletic performance,
                         ensuring you get top-notch guidance.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Do I need to book classes in advance?</h4>
-                    <p>Yes, we recommend booking your spot for group classes like yoga, cardio, and strength training through our web app to secure your 
+                    <p>Yes, we recommend booking your spot for group classes like yoga, cardio, and strength training through our web app to secure your
                         place – it’s quick and easy!</p>
                 </div>
                 <div class="faq-item">
                     <h4>Can beginners join FitZone?</h4>
                     <p>Of course! Whether you’re new to fitness or a pro, our programs and classes are designed for all levels, with trainers ready to support
-                         you every step of the way.</p>
+                        you every step of the way.</p>
                 </div>
             </div>
         </div>
